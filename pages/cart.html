@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css Cart File  -->
+    <link rel="stylesheet" href="../css/cart.css" />
+    <!-- Css Main File  -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Css Products file  -->
+    <link rel="stylesheet" href="../css/products.css" />
+    <!-- Google fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Box Icons link  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Cart Page - TechnoHub</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">Techno<span>Hub</span></div>
+      <ul class="links">
+        <li><a class="link" href="../index.html">Home</a></li>
+        <li><a class="link" href="products.html">Products</a></li>
+        <li><a class="link" href="../index.categories">Categories</a></li>
+        <li><a class="link" href="../index.about">About</a></li>
+        <li><a class="link" href="../index.contact">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <div class="search-box">
+          <input
+            type="search"
+            name="search-input"
+            placeholder="Search products..."
+          />
+          <i class="bx bx-search search-btn"></i>
+        </div>
+        <i class="bx bx-heart-circle wishlist-icon"></i>
+        <a href="cart.html" class="cart-wrapper">
+          <i class="bx bx-cart-download cart-icon"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <i class="bx bx-menu menu-icon"></i>
+      </div>
+    </nav>
+    <section class="page-header">
+      <div class="container">
+        <h1>Shopping Cart</h1>
+        <p>Review your selected items and proceed to checkout</p>
+      </div>
+    </section>
+    <section class="cart-section">
+      <div class="items-container"></div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+  </body>
+</html>
