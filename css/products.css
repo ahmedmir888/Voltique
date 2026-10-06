@@ -208,12 +208,11 @@
 
 .product-bottom .add-cart-btn {
   padding: 10px 10px;
-  margin: 0;
   border: none;
   border-radius: 10px;
   background-color: var(--sage);
   color: var(--white);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
@@ -229,6 +228,7 @@
   border-radius: 10px;
   font-weight: 600;
   font-size: 16px;
+  text-align: center;
   cursor: pointer;
   transition: 0.3s ease;
 }

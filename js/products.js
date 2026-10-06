@@ -42,7 +42,6 @@ productsData.forEach((product) => {
 
         <button type="button" class="add-cart-btn" data-id="${product.id}">
           Add to Cart
-          <i class="bx bx-cart-download"></i>
         </button>
         <a href="details.html?id=${product.id}" class="details-btn">
           View Details
