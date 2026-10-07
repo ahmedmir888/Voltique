@@ -42,18 +42,14 @@
 
       <div class="nav-icons">
         <div class="search-box">
-          <input
-            type="search"
-            name="search-input"
-            placeholder="Search products..."
-          />
+          <input type="text" name="search-input" placeholder="Search..." />
           <i class="bx bx-search search-btn"></i>
         </div>
 
         <i class="bx bx-heart-circle wishlist-icon"></i>
 
         <div class="cart-wrapper">
-          <i class="bx bx-cart-download cart-icon"></i>
+          <a href="cart.html"><i class="bx bx-cart-download cart-icon"></i></a>
           <span class="cart-count">0</span>
         </div>
 
@@ -82,15 +78,13 @@
           <span class="product-price"></span>
 
           <div class="product-actions">
-            <div class="quantity-control">
-              <button class="decrease-product-quantity">-</button>
-              <span class="product-quantity">1</span>
-              <button class="increase-product-quantity">+</button>
-            </div>
-
-            <button class="add-to-cart-btn">Add To Cart</button>
+            <button class="details-add-cart-btn">Add To Cart</button>
+            <button class="back-btn" onclick="history.back()">
+              <i class="bx bx-arrow-back"></i>
+              Back
+            </button>
           </div>
-        </div> 
+        </div>
       </div>
     </main>
 
