@@ -68,6 +68,11 @@ if (cartData.length === 0) {
   const cartProceed = document.createElement("button");
   cartProceed.className = "cart-proceed-btn";
   cartProceed.textContent = "Proceed To Checkout";
+
+  cartProceed.addEventListener("click", () => {
+    window.location.href = "checkout.html";
+  });
+
   const continueShoppingLink = document.createElement("a");
   continueShoppingLink.href = "products.html";
   continueShoppingLink.className = "continue-shopping-link";

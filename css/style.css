@@ -329,7 +329,7 @@ li {
   }
   .hero-section .hero-img {
     max-width: 400px;
-    height: 300px;
+    height: 330px;
   }
 }
 
@@ -344,11 +344,12 @@ li {
   }
   .hero-content {
     text-align: center;
+    order: 2;
   }
   .hero-section .hero-img {
     width: 100%;
     max-width: 400px;
-    height: 280px;
+    height: 370px;
   }
 }
 /* End hero section */
