@@ -13,10 +13,7 @@ updateCartCount();
 const productsGrid = document.querySelector(".products-grid");
 
 function renderingProducts(productsData) {
-  // تفريغ شبكة المنتجات أولاً حتى تختفي المنتجات القديمة
   productsGrid.innerHTML = "";
-
-  // إذا لم يتطابق البحث مع أي منتج
   if (productsData.length === 0) {
     productsGrid.innerHTML = `
     <div class="product-showing-no-result">
@@ -67,30 +64,6 @@ function renderingProducts(productsData) {
   });
 }
 
-const searchProductsInput = document.querySelector(".search-products-input");
-const searchProductsIcon = document.querySelector(".search-products-icon");
-
-function searchForProducts() {
-  if (searchProductsInput.value !== "") {
-    let searchValue = searchProductsInput.value.toLowerCase().trim();
-    fitleredProducts = productsData.filter((product) => {
-      return (
-        product.name.toLowerCase().trim().includes(searchValue),
-        product.category.toLowerCase().trim().includes(searchValue)
-      );
-    });
-  }
-  renderingProducts(fitleredProducts);
-}
-searchProductsIcon.onclick = function () {
-  searchForProducts();
-};
-searchProductsInput.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    searchForProducts();
-  }
-});
-
 function updateCart(product) {
   const existingProduct = cart.find((item) => item.id === product.id);
 
@@ -110,14 +83,53 @@ function updateCart(product) {
 
 renderingProducts(productsData);
 
-const addCartButtons = document.querySelectorAll(".add-cart-btn");
+const searchProductsInput = document.querySelector(".search-products-input");
+const searchProductsIcon = document.querySelector(".search-products-icon");
 
-addCartButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const productId = Number(button.dataset.id);
+function searchForProducts() {
+  if (searchProductsInput.value.trim() !== "") {
+    let searchValue = searchProductsInput.value.toLowerCase().trim();
+    filteredProducts = productsData.filter((product) => {
+      return (
+        product.name.toLowerCase().trim().includes(searchValue) ||
+        product.category.toLowerCase().trim().includes(searchValue)
+      );
+    });
+    renderingProducts(filteredProducts);
+  } else {
+    productsGrid.innerHTML = `
+    <div class="product-showing-no-result">
+    <p class="product-no-results">Please Right Product Name Currectly</p>
+    </div>
+    `;
+  }
+}
 
-    const product = productsData.find((product) => product.id === productId);
+productsGrid.addEventListener("click", (event) => {
+  const button = event.target.closest(".add-cart-btn");
+  if (!button) return;
+  const productId = Number(button.dataset.id);
+  const product = cart.find((item) => item.id === productId);
+  if (!product) return;
+  updateCart(product);
+});
 
-    updateCart(product);
-  });
+// const addCartButtons = document.querySelectorAll(".add-cart-btn");
+// addCartButtons.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     const productId = Number(button.dataset.id);
+
+//     const product = productsData.find((product) => product.id === productId);
+
+//     updateCart(product);
+//   });
+// });
+
+searchProductsIcon.onclick = function () {
+  searchForProducts();
+};
+searchProductsInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchForProducts();
+  }
 });
