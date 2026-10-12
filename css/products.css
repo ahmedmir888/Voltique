@@ -237,3 +237,12 @@
   background-color: #000;
   color: #fff;
 }
+
+.product-no-results {
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--sage);
+    margin: 0 auto;
+}

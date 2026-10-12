@@ -18,7 +18,11 @@ function renderingProducts(productsData) {
 
   // إذا لم يتطابق البحث مع أي منتج
   if (productsData.length === 0) {
-    productsGrid.innerHTML = `<p class="product-no-results">There is no product in this name</p>`;
+    productsGrid.innerHTML = `
+    <div class="product-showing-no-result">
+    <p class="product-no-results">There is no product in this name please Search Again</p>
+    </div>
+    `;
     return;
   }
   productsData.forEach((product) => {
@@ -81,11 +85,11 @@ function searchForProducts() {
 searchProductsIcon.onclick = function () {
   searchForProducts();
 };
-searchProductsInput.addEventListener("keydown", function(event){
-  if(event.key === "Enter"){
+searchProductsInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
     searchForProducts();
   }
-})
+});
 
 function updateCart(product) {
   const existingProduct = cart.find((item) => item.id === product.id);
@@ -117,4 +121,3 @@ addCartButtons.forEach((button) => {
     updateCart(product);
   });
 });
-
