@@ -56,7 +56,8 @@
 .search-products i {
   font-size: 20px;
   position: relative;
-  left: 5px;
+  right: 30px;
+  cursor: pointer;
 }
 
 .filter-products select,
@@ -193,7 +194,7 @@
   color: #f5a623;
   font-size: 16px;
 }
-.product-card .rate-and-price span.price{
+.product-card .rate-and-price span.price {
   font-weight: 600;
 }
 
@@ -221,7 +222,7 @@
 .product-bottom .add-cart-btn:hover {
   background-color: var(--dark-green);
 }
-.product-bottom .details-btn{
+.product-bottom .details-btn {
   background-color: #d9d9d9;
   color: #000;
   padding: 8px 10px;
@@ -232,7 +233,7 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
-.product-bottom .details-btn:hover{
+.product-bottom .details-btn:hover {
   background-color: #000;
   color: #fff;
 }

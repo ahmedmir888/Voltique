@@ -12,46 +12,80 @@ updateCartCount();
 
 const productsGrid = document.querySelector(".products-grid");
 
-productsData.forEach((product) => {
-  let stars = "";
-  for (let i = 0; i < product.rating; i++) {
-    stars += `<i class="bx bxs-star"></i>`;
+function renderingProducts(productsData) {
+  // تفريغ شبكة المنتجات أولاً حتى تختفي المنتجات القديمة
+  productsGrid.innerHTML = "";
+
+  // إذا لم يتطابق البحث مع أي منتج
+  if (productsData.length === 0) {
+    productsGrid.innerHTML = `<p class="product-no-results">There is no product in this name</p>`;
+    return;
   }
+  productsData.forEach((product) => {
+    let stars = "";
+    for (let i = 0; i < product.rating; i++) {
+      stars += `<i class="bx bxs-star"></i>`;
+    }
 
-  let productCard = `
-  <article class="product-card">
-    <div class="product-img">
-      <img src="${product.img}" alt="${product.name}">
-    </div>
+    let productCard = `
+    <article class="product-card">
+      <div class="product-img">
+        <img src="${product.img}" alt="${product.name}">
+      </div>
+  
+      <div class="product-information">
+        <div class="cate-favo">
+        <span class="product-category">${product.category}</span>
+        <i class="bx bxs-heart add-favorite-icon"></i>
+        </div>
+        <h2>${product.name}</h2>
+        <div class="rate-and-price">
+            <div class="stars">
+            <span>Rating:</span>
+            ${stars}
+            </div>
+            
+            <span class="price">$${product.price}</span>
+        </div>
+        <div class="product-bottom">
+  
+          <button type="button" class="add-cart-btn" data-id="${product.id}">
+            Add to Cart
+          </button>
+          <a href="details.html?id=${product.id}" class="details-btn">
+            View Details
+          </a>
+        </div>
+      </div>
+    </article>
+      `;
+    productsGrid.innerHTML += productCard;
+  });
+}
 
-    <div class="product-information">
-      <div class="cate-favo">
-      <span class="product-category">${product.category}</span>
-      <i class="bx bxs-heart add-favorite-icon"></i>
-      </div>
-      <h2>${product.name}</h2>
-      <div class="rate-and-price">
-          <div class="stars">
-          <span>Rating:</span>
-          ${stars}
-          </div>
-          
-          <span class="price">$${product.price}</span>
-      </div>
-      <div class="product-bottom">
+const searchProductsInput = document.querySelector(".search-products-input");
+const searchProductsIcon = document.querySelector(".search-products-icon");
 
-        <button type="button" class="add-cart-btn" data-id="${product.id}">
-          Add to Cart
-        </button>
-        <a href="details.html?id=${product.id}" class="details-btn">
-          View Details
-        </a>
-      </div>
-    </div>
-  </article>
-    `;
-  productsGrid.innerHTML += productCard;
-});
+function searchForProducts() {
+  if (searchProductsInput.value !== "") {
+    let searchValue = searchProductsInput.value.toLowerCase().trim();
+    fitleredProducts = productsData.filter((product) => {
+      return (
+        product.name.toLowerCase().trim().includes(searchValue),
+        product.category.toLowerCase().trim().includes(searchValue)
+      );
+    });
+  }
+  renderingProducts(fitleredProducts);
+}
+searchProductsIcon.onclick = function () {
+  searchForProducts();
+};
+searchProductsInput.addEventListener("keydown", function(event){
+  if(event.key === "Enter"){
+    searchForProducts();
+  }
+})
 
 function updateCart(product) {
   const existingProduct = cart.find((item) => item.id === product.id);
@@ -70,6 +104,8 @@ function updateCart(product) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+renderingProducts(productsData);
+
 const addCartButtons = document.querySelectorAll(".add-cart-btn");
 
 addCartButtons.forEach((button) => {
@@ -81,3 +117,4 @@ addCartButtons.forEach((button) => {
     updateCart(product);
   });
 });
+
