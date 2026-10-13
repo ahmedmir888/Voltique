@@ -79,6 +79,7 @@
 }
 
 .details-add-cart-btn {
+  font-size: 17px;
   border: none;
   padding: 12px 30px;
   background-color: #6d7e5a;
@@ -92,12 +93,16 @@
   background-color: #38472a;
 }
 .back-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   border: none;
+  font-size: 17px;
   background-color: #d9d9d9;
   color: #000;
   padding: 10px 20px;
   border-radius: 20px;
-  cursor: pointer;
   transition: 0.3s ease;
 }
 .back-btn:hover {

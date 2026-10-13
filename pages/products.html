@@ -53,34 +53,27 @@
     <section class="products-controls">
       <div class="container">
         <div class="search-products">
-          <input class="search-products-input" type="text" placeholder="Search products..." />
+          <input
+            class="search-products-input"
+            type="text"
+            placeholder="Search products..."
+          />
           <i class="bx bx-search search-products-icon"></i>
         </div>
 
         <div class="filter-products">
-          <select>
+          <select class="select-category-options">
             <option value="all">All Categories</option>
-            <option value="smartphones">Smartphones</option>
-            <option value="laptops">Laptops</option>
-            <option value="televisions">Televisions</option>
+            <option value="smartphone">Smartphones</option>
+            <option value="laptop">Laptops</option>
+            <option value="television">Televisions</option>
             <option value="audio">Audio</option>
-            <option value="cameras">Cameras</option>
-            <option value="gaming">Gaming</option>
-            <option value="appliances">Home Appliances</option>
             <option value="accessories">Accessories</option>
           </select>
         </div>
 
-        <div class="price-filter">
-          <input type="number" placeholder="Min Price" min="0" />
-
-          <input type="number" placeholder="Max Price" min="0" />
-
-          <button type="button">Apply</button>
-        </div>
-
         <div class="sort-products">
-          <select>
+          <select class="select-product-sort">
             <option value="default">Sort By</option>
             <option value="price-low">Price: Low to High</option>
             <option value="price-high">Price: High to Low</option>

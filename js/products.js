@@ -51,7 +51,7 @@ function renderingProducts(productsData) {
         <div class="product-bottom">
   
           <button type="button" class="add-cart-btn" data-id="${product.id}">
-            Add to Cart
+            Add to Cart <i class='bx bx-cart-download'></i>
           </button>
           <a href="details.html?id=${product.id}" class="details-btn">
             View Details
@@ -86,44 +86,114 @@ renderingProducts(productsData);
 const searchProductsInput = document.querySelector(".search-products-input");
 const searchProductsIcon = document.querySelector(".search-products-icon");
 
+// Search For Products Func
 function searchForProducts() {
-  if (searchProductsInput.value.trim() !== "") {
-    let searchValue = searchProductsInput.value.toLowerCase().trim();
-    filteredProducts = productsData.filter((product) => {
-      return (
-        product.name.toLowerCase().trim().includes(searchValue) ||
-        product.category.toLowerCase().trim().includes(searchValue)
-      );
-    });
-    renderingProducts(filteredProducts);
-  } else {
-    productsGrid.innerHTML = `
-    <div class="product-showing-no-result">
-    <p class="product-no-results">Please Right Product Name Currectly</p>
-    </div>
-    `;
+  let searchValue = searchProductsInput.value.toLowerCase().trim();
+
+  if (searchValue === "") {
+    renderingProducts(productsData);
+    return;
   }
+
+  const filteredProducts = productsData.filter((product) => {
+    return (
+      product.name.toLowerCase().includes(searchValue) ||
+      product.category.toLowerCase().includes(searchValue)
+    );
+  });
+  renderingProducts(filteredProducts);
 }
+
+const selectProducts = document.querySelector(".select-product-sort");
+
+// Products Sorting Func
+function productsSorting(productsData) {
+  selectProducts.addEventListener("change", () => {
+    if (selectProducts.value === "default") {
+      renderingProducts(productsData);
+    } else if (selectProducts.value === "price-low") {
+      let sortProductsData = [...productsData].sort(
+        (a, b) => a.price - b.price,
+      );
+      renderingProducts(sortProductsData);
+    } else if (selectProducts.value === "price-high") {
+      let sortProductsData = [...productsData].sort(
+        (a, b) => b.price - a.price,
+      );
+      renderingProducts(sortProductsData);
+    } else if (selectProducts.value === "rating") {
+      let sortProductsData = [...productsData].sort(
+        (a, b) => b.rating - a.rating,
+      );
+      renderingProducts(sortProductsData);
+    } else if (selectProducts.value === "name-az") {
+      let sortProductsData = [...productsData].sort((a, b) =>
+        a.name.localeCompare(b.name),
+      );
+      renderingProducts(sortProductsData);
+    } else if (selectProducts.value === "name-za") {
+      let sortProductsData = [...productsData].sort((a, b) =>
+        b.name.localeCompare(a.name),
+      );
+      renderingProducts(sortProductsData);
+    }
+  });
+}
+
+const selectCategoryOption = document.querySelector(".select-category-options");
+
+function filterBaseOnCategory(productsData) {
+  selectCategoryOption.addEventListener("change", () => {
+    if (selectCategoryOption.value === "all") {
+      renderingProducts(productsData);
+    } else if (selectCategoryOption.value === "smartphone") {
+      let theFilteredProduct = productsData.filter(
+        (prodcut) =>
+          prodcut.category.toLowerCase() ===
+          selectCategoryOption.value.toLowerCase(),
+      );
+      renderingProducts(theFilteredProduct);
+    } else if (selectCategoryOption.value === "laptop") {
+      let theFilteredProduct = productsData.filter(
+        (prodcut) =>
+          prodcut.category.toLowerCase() ===
+          selectCategoryOption.value.toLowerCase(),
+      );
+      renderingProducts(theFilteredProduct);
+    } else if (selectCategoryOption.value === "television") {
+      let theFilteredProduct = productsData.filter(
+        (prodcut) =>
+          prodcut.category.toLowerCase() ===
+          selectCategoryOption.value.toLowerCase(),
+      );
+      renderingProducts(theFilteredProduct);
+    } else if (selectCategoryOption.value === "audio") {
+      let theFilteredProduct = productsData.filter(
+        (prodcut) =>
+          prodcut.category.toLowerCase() ===
+          selectCategoryOption.value.toLowerCase(),
+      );
+      renderingProducts(theFilteredProduct);
+    } else if (selectCategoryOption.value === "accessories") {
+      let theFilteredProduct = productsData.filter(
+        (prodcut) =>
+          prodcut.category.toLowerCase() ===
+          selectCategoryOption.value.toLowerCase(),
+      );
+      renderingProducts(theFilteredProduct);
+    }
+  });
+}
+filterBaseOnCategory(productsData);
 
 productsGrid.addEventListener("click", (event) => {
   const button = event.target.closest(".add-cart-btn");
   if (!button) return;
   const productId = Number(button.dataset.id);
-  const product = cart.find((item) => item.id === productId);
+  const product = productsData.find((item) => item.id === productId);
   if (!product) return;
   updateCart(product);
 });
-
-// const addCartButtons = document.querySelectorAll(".add-cart-btn");
-// addCartButtons.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     const productId = Number(button.dataset.id);
-
-//     const product = productsData.find((product) => product.id === productId);
-
-//     updateCart(product);
-//   });
-// });
 
 searchProductsIcon.onclick = function () {
   searchForProducts();
@@ -133,3 +203,4 @@ searchProductsInput.addEventListener("keydown", function (event) {
     searchForProducts();
   }
 });
+productsSorting(productsData);
