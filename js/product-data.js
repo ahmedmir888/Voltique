@@ -5,7 +5,7 @@ const productsData = [
     category: "Smartphone",
     price: 1099,
     rating: 5,
-    img: "../imgs/samsung.jfif",
+    img: "../imgs/Samsung S26 Ultra.jfif",
     description:
       "Display: 6.9-inch Dynamic AMOLED 2X, QHD+ resolution (3120 x 1440), adaptive 1–120Hz refresh rate, Snapdragon 8 Elite Gen 5 for Galaxy processor, 12GB RAM, 256GB internal storage, rear cameras: 200MP main with OIS, 50MP ultra-wide, 50MP telephoto with 5x optical zoom, 10MP telephoto with 3x optical zoom, 12MP front camera, 5000mAh battery, USB-C fast charging, wireless charging, 5G, Wi-Fi 7, Bluetooth 6.0, NFC, Android with One UI, integrated S Pen, IP68 water and dust resistance, 8K video recording, fingerprint sensor, and face recognition.",
   },
@@ -151,7 +151,7 @@ const productsData = [
   },
   {
     id: 16,
-    name: "Logitech G Pro X Superlight 2",
+    name: "Logitech G Pro X",
     category: "Accessories",
     price: 160,
     rating: 5,
@@ -166,6 +166,56 @@ const productsData = [
     price: 100,
     rating: 5,
     img: "../imgs/Keychron K2 Pro.jfif",
+    description:
+      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+  },
+  {
+    id: 18,
+    name: "Gaming Chair",
+    category: "gaming",
+    price: 100,
+    rating: 5,
+    img: "../imgs/Gaming Chair.jfif",
+    description:
+      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+  },
+  {
+    id: 19,
+    name: "Computer chair",
+    category: "gaming",
+    price: 100,
+    rating: 5,
+    img: "../imgs/Computer chair.jfif",
+    description:
+      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+  },
+  {
+    id: 20,
+    name: "PlayStation 5",
+    category: "gaming",
+    price: 500,
+    rating: 5,
+    img: "../imgs/Playstation Five.jfif",
+    description:
+      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+  },
+  {
+    id: 20,
+    name: "Hyperx Quadcast audio",
+    category: "accessories",
+    price: 130,
+    rating: 5,
+    img: "../imgs/Hyperx Quadcast audio accessories.jfif",
+    description:
+      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+  },
+  {
+    id: 21,
+    name: "Logitech G502 X Plus",
+    category: "accessories",
+    price: 150,
+    rating: 5,
+    img: "../imgs/Logitech G502 X Plus.jfif",
     description:
       "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
   },
