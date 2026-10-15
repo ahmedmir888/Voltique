@@ -173,41 +173,41 @@ const productsData = [
     id: 18,
     name: "Gaming Chair",
     category: "gaming",
-    price: 100,
+    price: 499,
     rating: 5,
     img: "../imgs/Gaming Chair.jfif",
     description:
-      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+      "Since is Gaming Chair a category, the Secretlab TITAN Evo represents the gold standard. It offers professional-grade ergonomics with an integrated 4-way adjustable lumbar support system, magnetic memory foam pillows, 4D armrests, and a multi-tilt mechanism designed for long gaming or work sessions.",
   },
   {
     id: 19,
     name: "Computer chair",
     category: "gaming",
-    price: 100,
+    price: 599,
     rating: 5,
     img: "../imgs/Computer chair.jfif",
     description:
-      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+      "Since is Gaming Chair a category, the Secretlab TITAN Evo represents the gold standard. It offers professional-grade ergonomics with an integrated 4-way adjustable lumbar support system, magnetic memory foam pillows, 4D armrests, and a multi-tilt mechanism designed for long gaming or work sessions.",
   },
   {
     id: 20,
     name: "PlayStation 5",
     category: "gaming",
-    price: 500,
+    price: 559,
     rating: 5,
     img: "../imgs/Playstation Five.jfif",
     description:
-      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+      "Sony's current-generation flagship home video game console. It delivers rapid load times with a high-speed SSD, ultra-smooth gameplay up to 4K at 120fps, ray tracing, and immersive Tempest 3D Audio. The included DualSense controller features advanced haptic feedback and adaptive triggers to simulate real-world gameplay tension.",
   },
   {
     id: 20,
     name: "Hyperx Quadcast audio",
     category: "accessories",
-    price: 130,
+    price: 110,
     rating: 5,
     img: "../imgs/Hyperx Quadcast audio accessories.jfif",
     description:
-      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+      " A standalone USB condenser microphone designed for streamers, podcasters, and gamers. It features an anti-vibration shock mount, an internal pop filter, and a signature tap-to-mute sensor with an LED indicator. It provides excellent vocal reproduction with four selectable polar patterns (stereo, omnidirectional, cardioid, and bidirectional).",
   },
   {
     id: 21,
@@ -217,6 +217,6 @@ const productsData = [
     rating: 5,
     img: "../imgs/Logitech G502 X Plus.jfif",
     description:
-      "Type: compact 75% mechanical keyboard with 84 keys, wireless Bluetooth and wired USB-C connectivity, compatibility with macOS, Windows and Linux, mechanical switch options depending on selected version, hot-swappable switch support on compatible variants, RGB or white backlight depending on model, double-shot PBT keycaps on supported versions, QMK and VIA programmability, customizable keymaps and macros, adjustable typing angle, rechargeable battery, and compact layout with function row, arrow keys and navigation keys. Switch type, backlight, keycap material and hot-swap capability depend on the exact variant.",
+      "A premium wireless RGB gaming mouse that updates Logitech's iconic G502 design. It features LIGHTFORCE hybrid optical-mechanical switches for instant actuation, a precise HERO 25K optical sensor, 13 programmable buttons, and an 8-LED customizable light strip. It charges via USB-C or a PowerPlay wireless mat.",
   },
 ];

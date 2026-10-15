@@ -130,9 +130,9 @@ productsGrid.addEventListener("click", (event) => {
   updateCart(product);
 });
 
-searchProductsIcon.onclick = function () {
+searchProductsIcon.addEventListener("click",()=>{
   applyProductsOptions();
-};
+})
 searchProductsInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     applyProductsOptions();

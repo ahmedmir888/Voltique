@@ -72,6 +72,9 @@
 .cart-summary .continue-shopping-link {
   display: block;
   text-align: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid gray;
   font-size: 15px;
   font-weight: 600;
   color: gray;
@@ -80,6 +83,23 @@
 }
 .cart-summary .continue-shopping-link:hover {
   color: #000;
+}
+.cart-summary .clear-cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: #888;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.cart-summary .clear-cart-btn:hover {
+  background-color: #970909;
 }
 
 .cart-section .items-container {

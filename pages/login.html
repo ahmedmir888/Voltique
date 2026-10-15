@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css Main File  -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- login Css File  -->
+    <link rel="stylesheet" href="../css/login.css" />
+    <!-- Google fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Box Icons link  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>TechnoHub</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">Techno<span>Hub</span></div>
+      <ul class="links">
+        <li><a class="link" href="../index.html">Home</a></li>
+        <li><a class="link" href="products.html">Products</a></li>
+        <li><a class="link" href="categories.html">Categories</a></li>
+        <li><a class="link" href="about.html">About</a></li>
+        <li><a class="link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <i class="bx bx-heart-circle wishlist-icon"></i>
+        <a href="pages/cart.html" class="cart-wrapper">
+          <i class="bx bx-cart-download cart-icon"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <i class="bx bx-menu menu-icon"></i>
+        <a href="login.html" class="log-in">Log In</a>
+      </div>
+    </nav>
+    <div class="login-section">
+      <div class="login-container">
+        <div class="login-header">
+          <h1>Welcome Back</h1>
+          <p>Please enter your details to sign in</p>
+        </div>
+
+        <form>
+          <!-- Email Input -->
+          <div class="input-group">
+            <i class="bx bx-envelope"></i>
+            <input type="email" placeholder="Email Address" required />
+          </div>
+
+          <!-- Password Input -->
+          <div class="input-group">
+            <i class="bx bx-lock-alt"></i>
+            <input type="password" placeholder="Password" required />
+          </div>
+
+          <!-- Actions -->
+          <div class="form-actions">
+            <label class="remember-me">
+              <input type="checkbox" /> Remember me
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="login-btn">Log In</button>
+        </form>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/login-js"></script>
+  </body>
+</html>

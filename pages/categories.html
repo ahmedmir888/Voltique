@@ -1,11 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css Main File  -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Categories Css File  -->
+    <link rel="stylesheet" href="../css/categories.css" />
+    <!-- Google fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Box Icons link  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>TechnoHub</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">Techno<span>Hub</span></div>
+      <ul class="links">
+        <li><a class="link" href="../index.html">Home</a></li>
+        <li><a class="link" href="products.html">Products</a></li>
+        <li><a class="link" href="categories.html">Categories</a></li>
+        <li><a class="link" href="about.html">About</a></li>
+        <li><a class="link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <i class="bx bx-heart-circle wishlist-icon"></i>
+        <a href="pages/cart.html" class="cart-wrapper">
+          <i class="bx bx-cart-download cart-icon"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <i class="bx bx-menu menu-icon"></i>
+        <a href="login.html" class="log-in">Log In</a>
+      </div>
+    </nav>
+
+    <div class="categories-section">
+      <h1 class="main-title">Categories Section</h1>
+      <p class="main-paragraph">Take A Look At Our Beautiful Categories</p>
+      <div class="categories-container"></div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/product-data.js"></script>
+    <script src="../js/categories.js"></script>
+  </body>
 </html>

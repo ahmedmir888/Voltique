@@ -39,6 +39,10 @@ function showEmptyCart() {
   `;
 }
 
+const clearCartBtn = document.createElement("button");
+clearCartBtn.className = "clear-cart-btn";
+clearCartBtn.innerHTML = `Clear Cart <i class='bx bxs-trash'></i>`;
+
 if (cartData.length === 0) {
   cartSection.innerHTML = showEmptyCart();
 } else {
@@ -87,6 +91,7 @@ if (cartData.length === 0) {
   shipping.appendChild(shippingLink);
   cartSummay.appendChild(cartProceed);
   cartSummay.appendChild(continueShoppingLink);
+  cartSummay.appendChild(clearCartBtn);
 
   updateCartUI();
 
@@ -203,4 +208,11 @@ trashCartBtn.forEach((btn) => {
 
     saveCart();
   });
+});
+
+clearCartBtn.addEventListener("click", () => {
+  cartData = [];
+  cartSection.innerHTML = showEmptyCart();
+  saveCart();
+  updateCartCount();
 });
