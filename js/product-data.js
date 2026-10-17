@@ -53,7 +53,7 @@ const productsData = [
     id: 6,
     name: "Samsung Galaxy Buds3 Pro",
     category: "Audio",
-    price: 180,
+    price: 120,
     rating: 5,
     img: "../imgs/Samsung Galaxy Buds3 Pro.jfif",
     description:

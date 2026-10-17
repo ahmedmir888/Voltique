@@ -43,35 +43,40 @@
     </nav>
     <div class="login-section">
       <div class="login-container">
-        <div class="login-header">
-          <h1>Welcome Back</h1>
-          <p>Please enter your details to sign in</p>
+        <div class="input-left">
+          <form>
+            <!-- Email Input -->
+            <div class="input-group">
+              <i class="bx bx-envelope"></i>
+              <input type="email" placeholder="Email Address" required />
+            </div>
+
+            <!-- Password Input -->
+            <div class="input-group">
+              <i class="bx bx-lock-alt"></i>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div class="log-in-by">
+              <p>Or Log in By :</p>
+              <div class="log-by-links">
+                <a class="google-icon" href=""
+                  ><i class="bx bxl-google-plus"></i
+                ></a>
+
+                <a class="github-icon" href=""><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="login-btn">Log In</button>
+          </form>
         </div>
-
-        <form>
-          <!-- Email Input -->
-          <div class="input-group">
-            <i class="bx bx-envelope"></i>
-            <input type="email" placeholder="Email Address" required />
+        <div class="input-right">
+          <div class="login-header">
+            <h1>Welcome Back</h1>
+            <p>Please enter your details to sign in</p>
           </div>
-
-          <!-- Password Input -->
-          <div class="input-group">
-            <i class="bx bx-lock-alt"></i>
-            <input type="password" placeholder="Password" required />
-          </div>
-
-          <!-- Actions -->
-          <div class="form-actions">
-            <label class="remember-me">
-              <input type="checkbox" /> Remember me
-            </label>
-            <a href="#" class="forgot-password">Forgot password?</a>
-          </div>
-
-          <!-- Submit Button -->
-          <button type="submit" class="login-btn">Log In</button>
-        </form>
+        </div>
       </div>
     </div>
     <script src="../js/main.js"></script>

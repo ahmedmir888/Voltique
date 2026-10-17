@@ -131,7 +131,7 @@ li {
   font-weight: 600;
   padding: 6px 25px;
   background-color: var(--sage);
-  border-radius: 20px;
+  border-radius: 5px;
   color: white;
   transition: 0.3s ease;
 }
@@ -179,41 +179,62 @@ li {
   .nav .links {
     display: none;
   }
-  .nav .links.open {
+  .nav .links.open,
+  .nav .links.closing {
     position: absolute;
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 50px;
     top: 70px;
     left: 0;
     justify-content: center;
     align-items: center;
-    background-color: var(--sage);
+    background: rgba(109, 126, 90, 80%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 0 20px;
     overflow: hidden;
-    animation: nav-to-down 0.5s ease;
+  }
+  .nav .links.open {
+    animation: nav-to-down 0.5s ease forwards;
+  }
+  .nav .links.closing {
+    animation: nav-to-up 0.5s ease forwards;
+    pointer-events: none;
   }
   @keyframes nav-to-down {
     from {
       top: 60px;
-      opacity: 0.5;
+      opacity: 0;
     }
     to {
       top: 70px;
       opacity: 1;
     }
   }
-  .nav .links.open .link {
+  @keyframes nav-to-up {
+    from {
+      top: 70px;
+      opacity: 1;
+    }
+    to {
+      top: 60px;
+      opacity: 0;
+    }
+  }
+  .nav .links.open li,
+  .nav .links.closing li {
+    width: 100%;
+    transition: 0.3s;
+  }
+  .nav .links.open .link,
+  .nav .links.closing .link {
     font-size: 15px;
     color: white;
     font-weight: bold;
-    transition: 0.3s;
     height: 50px;
     padding: 0 10px;
   }
-  .nav .links.open .link:hover {
+  .nav .links.open li:hover {
     background-color: var(--dark-green);
   }
   .nav-icons .menu-icon {

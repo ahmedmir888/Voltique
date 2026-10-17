@@ -121,6 +121,34 @@ function applyProductsOptions() {
   renderingProducts(displayedProducts);
 }
 
+toastedNotification = document.querySelector(".toasted-container");
+
+const toast = document.createElement("div");
+toast.className = "toast";
+
+toast.innerHTML = `
+  <div class="toast-content">
+    <i class="bx bx-check-circle"></i>
+    <p class="toast-message">Product added to cart successfully!</p>
+  </div>
+`;
+
+toastedNotification.appendChild(toast);
+
+let toastTimer;
+
+function showToast(message) {
+  toast.querySelector(".toast-message").textContent = message;
+
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+
 productsGrid.addEventListener("click", (event) => {
   const button = event.target.closest(".add-cart-btn");
   if (!button) return;
@@ -128,11 +156,13 @@ productsGrid.addEventListener("click", (event) => {
   const product = productsData.find((item) => item.id === productId);
   if (!product) return;
   updateCart(product);
+
+  showToast(`👍 ${product.name} added to cart successfully!`);
 });
 
-searchProductsIcon.addEventListener("click",()=>{
+searchProductsIcon.addEventListener("click", () => {
   applyProductsOptions();
-})
+});
 searchProductsInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     applyProductsOptions();
