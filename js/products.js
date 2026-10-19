@@ -130,7 +130,6 @@ toastMessage = document.createElement("p");
 toastMessage.className = "toast-message";
 toast.appendChild(toastMessage);
 
-
 toastedContainer.appendChild(toast);
 
 let toastTimer;
@@ -173,3 +172,15 @@ selectCategoryOption.addEventListener("change", () => {
 selectProducts.addEventListener("change", () => {
   applyProductsOptions();
 });
+
+let favoriteIcon = document.querySelector(".add-favorite-icon");
+
+
+// favoriteIcon.addEventListener("click", (event) => {
+//   const button = event.target.closest("add-favorite-icon");
+//   if (!button) return;
+//   const productId = Number(button.dataset.id);
+//   const product = productsData.find((item) => item.id === productId);
+//     if (!product) return;
+//     // localStorage.setItem("favorite-product",)
+// });
