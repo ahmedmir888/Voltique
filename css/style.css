@@ -154,6 +154,13 @@ li {
 .nav-icons i:hover {
   color: var(--sage);
 }
+
+.favorite-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav .nav-icons .cart-wrapper {
   display: flex;
   justify-content: center;

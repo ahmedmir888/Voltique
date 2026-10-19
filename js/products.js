@@ -121,25 +121,22 @@ function applyProductsOptions() {
   renderingProducts(displayedProducts);
 }
 
-toastedNotification = document.querySelector(".toasted-container");
+toastedContainer = document.querySelector(".toasted-container");
 
 const toast = document.createElement("div");
 toast.className = "toast";
 
-toast.innerHTML = `
-  <div class="toast-content">
-    <i class="bx bx-check-circle"></i>
-    <p class="toast-message">Product added to cart successfully!</p>
-  </div>
-`;
+toastMessage = document.createElement("p");
+toastMessage.className = "toast-message";
+toast.appendChild(toastMessage);
 
-toastedNotification.appendChild(toast);
+
+toastedContainer.appendChild(toast);
 
 let toastTimer;
 
 function showToast(message) {
-  toast.querySelector(".toast-message").textContent = message;
-
+  toastMessage.innerHTML = message;
   toast.classList.add("show");
 
   clearTimeout(toastTimer);
@@ -157,7 +154,9 @@ productsGrid.addEventListener("click", (event) => {
   if (!product) return;
   updateCart(product);
 
-  showToast(`👍 ${product.name} added to cart successfully!`);
+  showToast(
+    `<i class='bx bxs-check-square'></i> ${product.name} added to cart successfully!`,
+  );
 });
 
 searchProductsIcon.addEventListener("click", () => {

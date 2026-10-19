@@ -241,7 +241,7 @@
 }
 
 .toast {
-  padding: 15px 20px;
+  padding: 15px 10px;
   background: var(--sage);
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
@@ -260,26 +260,22 @@
   transform: translateX(0);
 }
 
-.toast-content {
+.toast-message {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-}
-
-.toast-content i {
-  font-size: 24px;
-  color: var(--sage);
-}
-
-.toast-message {
   margin: 0;
   color: var(--white);
   font-size: 16px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .toasted-container {
-    right: 12px;
-    left: 12px;
+    max-width: 230px;
+    text-align: center;
+  }
+  .toast-message {
+    flex-direction: column;
   }
 }
