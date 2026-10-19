@@ -1,7 +1,8 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 const cartCount = document.querySelector(".cart-count");
-// to count the total quantity:
+// Cart Count Fun to count the total quantity:
 function updateCartCount() {
   const totalQuantity = cart.reduce((total, product) => {
     return total + product.quantity;
@@ -10,6 +11,7 @@ function updateCartCount() {
 }
 updateCartCount();
 
+// Rendring Products Function to add products dinemiclly
 const productsGrid = document.querySelector(".products-grid");
 
 function renderingProducts(productsData) {
@@ -37,7 +39,9 @@ function renderingProducts(productsData) {
       <div class="product-information">
         <div class="cate-favo">
         <span class="product-category">${product.category}</span>
-        <i class="bx bxs-heart add-favorite-icon"></i>
+        <i class="bx bxs-heart add-favorite-icon ${
+          favorites.includes(Number(product.id)) ? "active" : ""
+        }" data-id="${product.id}"></i>
         </div>
         <h2>${product.name}</h2>
         <div class="rate-and-price">
@@ -63,7 +67,7 @@ function renderingProducts(productsData) {
     productsGrid.innerHTML += productCard;
   });
 }
-
+// Update Cart Function To Check if the product is exist or no and increase the quantity
 function updateCart(product) {
   const existingProduct = cart.find((item) => item.id === product.id);
 
@@ -82,6 +86,8 @@ function updateCart(product) {
 }
 
 renderingProducts(productsData);
+
+// Start Search, Filter and Selection Function
 
 const searchProductsInput = document.querySelector(".search-products-input");
 const searchProductsIcon = document.querySelector(".search-products-icon");
@@ -121,6 +127,8 @@ function applyProductsOptions() {
   renderingProducts(displayedProducts);
 }
 
+// Adding Toast Notification
+
 toastedContainer = document.querySelector(".toasted-container");
 
 const toast = document.createElement("div");
@@ -145,6 +153,7 @@ function showToast(message) {
   }, 3000);
 }
 
+// Adding Products To Cart Logic
 productsGrid.addEventListener("click", (event) => {
   const button = event.target.closest(".add-cart-btn");
   if (!button) return;
@@ -173,14 +182,33 @@ selectProducts.addEventListener("change", () => {
   applyProductsOptions();
 });
 
-let favoriteIcon = document.querySelector(".add-favorite-icon");
+// Adding Products to Wishlist Logic
+productsGrid.addEventListener("click", (event) => {
+  const favoriteIcon = event.target.closest(".add-favorite-icon");
 
+  if (!favoriteIcon) return;
 
-// favoriteIcon.addEventListener("click", (event) => {
-//   const button = event.target.closest("add-favorite-icon");
-//   if (!button) return;
-//   const productId = Number(button.dataset.id);
-//   const product = productsData.find((item) => item.id === productId);
-//     if (!product) return;
-//     // localStorage.setItem("favorite-product",)
-// });
+  const productId = Number(favoriteIcon.dataset.id);
+
+  const isFavorite = favorites.includes(productId);
+
+  if (isFavorite) {
+    favorites = favorites.filter((id) => id !== productId);
+  } else {
+    favorites.push(productId);
+  }
+
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  favoriteIcon.classList.toggle("active", !isFavorite);
+
+  const product = productsData.find((item) => item.id === productId);
+
+  if (!product) return;
+
+  showToast(
+    isFavorite
+      ? `${product.name} removed from favorites`
+      : `${product.name} added to favorites`,
+  );
+});

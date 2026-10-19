@@ -143,15 +143,21 @@
   font-size: 18px;
   font-weight: 700;
 }
-.cate-favo .add-favorite-icon {
-  color: var(--black);
-  font-size: 18px;
+.add-favorite-icon {
+  color: #999;
+  font-size: 22px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.cate-favo .add-favorite-icon:hover {
-  color: #d62828;
+.add-favorite-icon:hover {
+  transform: scale(1.15);
+}
+
+.add-favorite-icon.active {
+  color: #e63946;
 }
 
 .product-card .product-information h2 {
