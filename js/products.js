@@ -184,7 +184,7 @@ selectProducts.addEventListener("change", () => {
 
 // Adding Products to Wishlist Logic
 productsGrid.addEventListener("click", (event) => {
-  const favoriteIcon = event.target.closest(".add-favorite-icon");
+  const favoriteIcon = event.target.closest(".add-favorite-icon");  
 
   if (!favoriteIcon) return;
 
@@ -208,7 +208,7 @@ productsGrid.addEventListener("click", (event) => {
 
   showToast(
     isFavorite
-      ? `${product.name} removed from favorites`
-      : `${product.name} added to favorites`,
+      ? `${product.name} removed from WishList`
+      : `${product.name} added to WishList`,
   );
 });

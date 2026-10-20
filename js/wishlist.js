@@ -1,4 +1,15 @@
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartCount = document.querySelector(".cart-count");
+// Cart Count Fun to count the total quantity:
+function updateCartCount() {
+  const totalQuantity = cart.reduce((total, product) => {
+    return total + product.quantity;
+  }, 0);
+  cartCount.textContent = totalQuantity;
+}
+updateCartCount();
 
 const wishlistGrid = document.querySelector(".wishlist-grid");
 
@@ -68,6 +79,33 @@ function renderWishlist() {
     `;
   });
 }
+
+// Update Cart Function To Check if the product is exist or no and increase the quantity
+function updateCart(product) {
+  const existingProduct = cart.find((item) => item.id === product.id);
+
+  if (!existingProduct) {
+    cart.push({
+      ...product,
+      quantity: 1,
+    });
+  } else {
+    existingProduct.quantity++;
+  }
+
+  updateCartCount();
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+wishlistGrid.addEventListener("click", (event) => {
+  const button = event.target.closest(".add-cart-btn");
+  if (!button) return;
+  const productId = Number(button.dataset.id);
+  const product = productsData.find((item) => item.id === productId);
+  if (!product) return;
+  updateCart(product);
+});
 
 wishlistGrid.addEventListener("click", (event) => {
   const favoriteIcon = event.target.closest(".add-favorite-icon");

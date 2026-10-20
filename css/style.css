@@ -39,6 +39,7 @@ li {
   margin-bottom: 30px;
   color: var(--sage);
 }
+
 .main-title::before {
   content: "";
   position: absolute;
@@ -56,6 +57,18 @@ li {
   margin-bottom: 50px;
 }
 
+@media(max-width:768px){
+  .main-title{
+    font-size: 25px;
+  }
+  .main-title::before{
+    width: 100px;
+    height: 3px;
+  }
+  .main-paragraph{
+    font-size: 16px;
+  }
+}
 /* Start Nav  */
 .nav {
   position: fixed;
@@ -127,7 +140,10 @@ li {
   gap: 20px;
 }
 .nav-icons .log-in {
-  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
   font-weight: 600;
   padding: 6px 25px;
   background-color: var(--sage);
@@ -138,10 +154,10 @@ li {
 .nav-icons .log-in:hover {
   background-color: var(--dark-green);
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .nav-icons .log-in {
     font-size: 15px;
-    padding: 5px 20px;
+    padding: 5px 15px;
   }
 }
 .nav-icons i {
@@ -314,6 +330,8 @@ li {
 }
 @media (max-width: 992px) {
   .hero-section .container {
+    padding-top: 100px;
+    height: 70vh;
     justify-content: center;
   }
   .hero-content h1 {
@@ -471,37 +489,41 @@ li {
 .product-info .rate i {
   color: orange;
 }
-.product-card .cart-btn-div {
+.product-card .feature-product-link-div {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 15px;
 }
-.product-info .cart-btn-div button {
-  padding: 10px 35px;
+.feature-product-link-div .feature-product-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
   border-radius: 15px;
-  border: none;
   background-color: var(--white);
-  font-size: 17px;
+  color: var(--black);
+  font-size: 16px;
   font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
   box-shadow: 2px 4px 8px rgba(0 0 0 / 0.3);
+  transition: 0.3s;
 }
-.product-info .cart-btn-div button i {
-  font-size: 18px;
-}
-.product-info .cart-btn-div button:hover {
+.feature-product-link:hover {
   background-color: var(--sage);
   color: white;
 }
-.product-info .favorite-icon {
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.3s ease;
+.feature-product-link:hover i {
+  animation: arrow-move 1s linear infinite;
 }
-.product-info .favorite-icon:hover {
-  color: red;
+@keyframes arrow-move {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
 }
 
 .products .all-products-link {

@@ -43,40 +43,69 @@
         <a href="login.html" class="log-in">Log In</a>
       </div>
     </nav>
-    <div class="login-section">
+    <div class="main-container">
       <div class="login-container">
-        <div class="input-left">
-          <form>
-            <!-- Email Input -->
-            <div class="input-group">
-              <i class="bx bx-envelope"></i>
-              <input type="email" placeholder="Email Address" required />
-            </div>
+        <div class="form-section">
+          <!-- Login Form  -->
+          <div class="form-container" id="loginForm">
+            <h1 class="form-title">Welcome Back</h1>
+            <p class="form-subtitle">
+              Sign in to your account to continue your journey
+            </p>
 
-            <!-- Password Input -->
-            <div class="input-group">
-              <i class="bx bx-lock-alt"></i>
-              <input type="password" placeholder="Password" required />
-            </div>
-            <div class="log-in-by">
-              <p>Or Log in By :</p>
-              <div class="log-by-links">
-                <a class="google-icon" href=""
-                  ><i class="bx bxl-google-plus"></i
-                ></a>
-
-                <a class="github-icon" href=""><i class="bx bxl-github"></i></a>
+            <form action="" id="loginFormSubmit">
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email Address"
+                  required
+                />
+                <i class="bx bxs-envelope"></i>
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  required
+                />
+                <i class="bx bx-key"></i>
+              </div>
+              <div class="forgot-password">
+                <a href="#">Forgot Password ?</a>
+              </div>
+              <button type="submit" class="btn-primery">
+                <span class="btn-text">Sign Up</span>
+              </button>
+            </form>
+            <div class="social-login">
+              <div class="social-title">Or Continue With</div>
+              <div class="social-buttons">
+                <div class="social-btn google">
+                  <i class="bx bxl-google"></i>
+                </div>
+                <div class="social-btn facebook">
+                  <i class="bx bxl-facebook"></i>
+                </div>
+                <div class="social-btn twitter">
+                  <i class="bx bxl-twitter"></i>
+                </div>
               </div>
             </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="login-btn">Log In</button>
-          </form>
+            <div class="form-switch">
+              Don't have an account? <a href="#">Create one</a>
+            </div>
+          </div>
         </div>
-        <div class="input-right">
-          <div class="login-header">
-            <h1>Welcome Back</h1>
-            <p>Please enter your details to sign in</p>
+        <div class="image-section">
+          <div class="floating-shapes">
+            <div class="image-content">
+              <h2>Hello, Friend</h2>
+              <p>
+                Enter your personal details and start your journey with us today
+              </p>
+            </div>
           </div>
         </div>
       </div>

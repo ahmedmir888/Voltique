@@ -139,58 +139,15 @@
   font-weight: 600;
 }
 
-.toasted-container {
-  position: fixed;
-  top: 150px;
-  right: 20px;
-  z-index: 20000;
-}
-
-.toast {
-  padding: 15px 10px;
-  background: var(--sage);
-  border-radius: 8px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(120%);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    visibility 0.3s ease;
-}
-
-.toast.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
-}
-
-.toast-message {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 0;
-  color: var(--white);
-  font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  .toasted-container {
-    max-width: 230px;
-    text-align: center;
-  }
-  .toast-message {
-    flex-direction: column;
-  }
-}
 
 .wishlist-showing-no-result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 150px 0;
   flex-direction: column;
   gap: 20px;
 }
