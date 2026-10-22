@@ -98,7 +98,7 @@
 .form-control:focus {
   border-color: #13a232;
   background: white;
-  box-shadow: 0px 0px 0px 4px rgba(19, 162, 50, 0.1);
+  box-shadow: 2px 4px 10px rgba(19, 162, 50, 0.3);
   transform: translateY(-1px);
 }
 
@@ -108,7 +108,7 @@
 
 .forgot-password a {
   font-weight: 600;
-  color:var(--sage);
+  color: var(--sage);
   transition: 0.3s ease;
 }
 .forgot-password a:hover {
@@ -207,24 +207,24 @@
   color: #115402;
 }
 
-@media(max-width:768px){
-  .login-container{
+@media (max-width: 768px) {
+  .login-container {
     flex-direction: column;
   }
-  .form-section{
+  .form-section {
     order: 2;
   }
-  .form-title{
+  .form-title {
     font-size: 25px;
   }
-  .image-content{
+  .image-content {
     padding: 20px;
   }
-  .image-content h2{
+  .image-content h2 {
     font-size: 25px;
     margin-bottom: 5px;
   }
-  .form-group{
+  .form-group {
     margin-bottom: 15px;
   }
 }

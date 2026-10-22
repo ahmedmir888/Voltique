@@ -96,6 +96,7 @@ const selectCategoryOption = document.querySelector(".select-category-options");
 
 function applyProductsOptions() {
   let displayedProducts = [...productsData];
+  // Search Logic
   let searchValue = searchProductsInput.value.toLowerCase().trim();
   if (searchValue !== "") {
     displayedProducts = displayedProducts.filter((product) => {
@@ -105,12 +106,14 @@ function applyProductsOptions() {
       );
     });
   }
+  // Select Logic
   let selectedCategory = selectCategoryOption.value;
   if (selectedCategory !== "all") {
     displayedProducts = displayedProducts.filter((product) => {
       return product.category.toLowerCase() === selectedCategory.toLowerCase();
     });
   }
+  // Sort Logic
   const sortValue = selectProducts.value;
   if (sortValue === "price-low") {
     displayedProducts.sort((a, b) => a.price - b.price);
@@ -170,10 +173,9 @@ productsGrid.addEventListener("click", (event) => {
 searchProductsIcon.addEventListener("click", () => {
   applyProductsOptions();
 });
-searchProductsInput.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    applyProductsOptions();
-  }
+
+searchProductsInput.addEventListener("input", () => {
+  applyProductsOptions();
 });
 selectCategoryOption.addEventListener("change", () => {
   applyProductsOptions();
@@ -184,7 +186,7 @@ selectProducts.addEventListener("change", () => {
 
 // Adding Products to Wishlist Logic
 productsGrid.addEventListener("click", (event) => {
-  const favoriteIcon = event.target.closest(".add-favorite-icon");  
+  const favoriteIcon = event.target.closest(".add-favorite-icon");
 
   if (!favoriteIcon) return;
 

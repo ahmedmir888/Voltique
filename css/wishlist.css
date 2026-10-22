@@ -150,6 +150,7 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  text-align: center;
 }
 .wishlist-showing-no-result p {
   font-size: 30px;

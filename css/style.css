@@ -57,15 +57,15 @@ li {
   margin-bottom: 50px;
 }
 
-@media(max-width:768px){
-  .main-title{
+@media (max-width: 768px) {
+  .main-title {
     font-size: 25px;
   }
-  .main-title::before{
+  .main-title::before {
     width: 100px;
     height: 3px;
   }
-  .main-paragraph{
+  .main-paragraph {
     font-size: 16px;
   }
 }
@@ -120,15 +120,19 @@ li {
   .nav .links .link::before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 0;
     height: 3px;
     bottom: 10px;
-    left: -100%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #6d7e5a;
     transition: all 0.3s ease;
   }
   .nav .links .link:hover::before {
-    left: 0;
+    width: 80%;
+  }
+  .nav .links .link.active::before {
+    width: 80%;
   }
 }
 
@@ -199,6 +203,9 @@ li {
   }
 }
 @media (max-width: 768px) {
+  .nav .logo{
+    font-size: 22px;
+  }
   .nav .links {
     display: none;
   }
@@ -260,9 +267,21 @@ li {
   .nav .links.open li:hover {
     background-color: var(--dark-green);
   }
+
+  .nav .nav-icons{
+    gap: 10px;
+  }
+  .nav-icons .log-in {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  .nav-icons a i{
+    font-size: 22px;
+  }
+
   .nav-icons .menu-icon {
     display: inline;
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 
@@ -330,8 +349,6 @@ li {
 }
 @media (max-width: 992px) {
   .hero-section .container {
-    padding-top: 100px;
-    height: 70vh;
     justify-content: center;
   }
   .hero-content h1 {

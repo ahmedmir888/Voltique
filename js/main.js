@@ -25,3 +25,15 @@ navUlLinks.addEventListener("animationend", function (event) {
     navUlLinks.classList.remove("closing");
   }
 });
+
+const allPagesLink = document.querySelectorAll(".nav .links .link");
+
+const currentPath = window.location.pathname;
+
+allPagesLink.forEach((link) => {
+  link.classList.remove("active");
+  const linkPath = link.pathname;
+  if (currentPath === linkPath) {
+    link.classList.add("active");
+  }
+});
