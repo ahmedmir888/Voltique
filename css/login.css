@@ -158,6 +158,18 @@
 .social-title::after {
   right: -5px;
 }
+@media (max-width: 768px) {
+  .social-title::before,
+  .social-title::after {
+    width: 10%;
+  }
+  .social-title::before {
+    left: 10px;
+  }
+  .social-title::after {
+    right: 10px;
+  }
+}
 .social-buttons {
   display: flex;
   gap: 12px;
