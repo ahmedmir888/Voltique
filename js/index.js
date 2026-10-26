@@ -3,7 +3,7 @@ let cartCountData = JSON.parse(localStorage.getItem("cart"));
 if (cartCountData === null || cartCountData.length === 0) {
   const cartCount = document.querySelector(".cart-count");
   cartCount.textContent = 0;
-}else{
+} else {
   const cartCount = document.querySelector(".cart-count");
   // to count the total quantity:
   function updateCartCount() {
@@ -14,3 +14,4 @@ if (cartCountData === null || cartCountData.length === 0) {
   }
   updateCartCount();
 }
+

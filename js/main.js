@@ -37,3 +37,23 @@ allPagesLink.forEach((link) => {
     link.classList.add("active");
   }
 });
+
+const revealElement = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  },
+);
+
+revealElement.forEach((element) => {
+  observer.observe(element);
+});

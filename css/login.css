@@ -7,6 +7,11 @@
   overflow: hidden;
   background-color: #f8fafc;
 }
+@media(max-width:768px){
+    .main-container{
+    padding: 50px 5px 0;
+  }
+}
 .main-container .login-container {
   display: flex;
   background-color: white;
@@ -123,7 +128,7 @@
   border-radius: 12px;
   font-size: 1rem;
   cursor: pointer;
-  margin: 20px 0 10px;
+  margin: 10px 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,7 +143,7 @@
 .social-title {
   text-align: center;
   color: gray;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   position: relative;
   font-weight: 500;
 }
@@ -220,21 +225,17 @@
 }
 
 @media (max-width: 768px) {
-  .login-container {
-    flex-direction: column;
+  .form-section{
+    padding: 20px;
   }
-  .form-section {
-    order: 2;
+  .forgot-password{
+    text-align: center;
   }
   .form-title {
     font-size: 25px;
   }
-  .image-content {
-    padding: 20px;
-  }
-  .image-content h2 {
-    font-size: 25px;
-    margin-bottom: 5px;
+  .image-section{
+    display: none;
   }
   .form-group {
     margin-bottom: 15px;
