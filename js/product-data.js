@@ -219,4 +219,34 @@ const productsData = [
     description:
       "A premium wireless RGB gaming mouse that updates Logitech's iconic G502 design. It features LIGHTFORCE hybrid optical-mechanical switches for instant actuation, a precise HERO 25K optical sensor, 13 programmable buttons, and an 8-LED customizable light strip. It charges via USB-C or a PowerPlay wireless mat.",
   },
+  {
+    id: 22,
+    name: "Nacon Revolution 5 Pro ",
+    category: "gaming",
+    price: 180,
+    rating: 5,
+    img: "../imgs/Nacon Revolution 5 Pro.jfif",
+    description:
+      "A high-end pro controller compatible with PS5, PS4, and PC. It utilizes Magnetic Hall Effect technology for both its analog sticks and triggers, making them virtually immune to stick drift. It features an asymmetrical layout (similar to an Xbox controller style), which many find more ergonomic. It also includes adjustable physical weights, trigger stops, mapping software, and a durable travel case.",
+  },
+  {
+    id: 23,
+    name: "DualShock 4",
+    category: "gaming",
+    price: 55,
+    rating: 5,
+    img: "../imgs/DualShock 4 Wireless Controller.jfif",
+    description:
+      "The classic PlayStation 4 controller featuring a clickable capacitive Touchpad, a built-in mono speaker, a 3.5mm headset jack, and a light bar. It offers a battery life of roughly 6–8 hours of continuous play and is fully compatible with PC and smart TVs.",
+  },
+  {
+    id: 24,
+    name: "DualSense Wireless",
+    category: "gaming",
+    price: 75,
+    rating: 5,
+    img: "../imgs/DualSense Wireless Controller.jfif",
+    description:
+      "The official PlayStation 5 controller featuring advanced Haptic Feedback and Adaptive Triggers (allowing you to feel dynamic resistance on L2 and R2 based on in-game actions like pulling a bowstring or slamming car brakes). It includes a built-in microphone, a mute button, and offers native Bluetooth compatibility with PC and mobile devices.",
+  },
 ];
