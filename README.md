@@ -70,13 +70,13 @@ This project does not require a package manager or build step.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+   git clone https://github.com/ahmedmir888/Voltique.git
    ```
 
 2. Open the project folder:
 
    ```bash
-   cd YOUR-REPOSITORY
+   cd Voltique
    ```
 
 3. Open `index.html` in your browser.
