@@ -356,7 +356,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   margin-bottom: 30px;
+  padding: 0 20px;
 }
 
 .choose-subtitle {
@@ -372,6 +374,15 @@
 }
 .choose-description {
   letter-spacing: 1.3px;
+}
+
+@media(max-width:768px){
+  .choose-title{
+    font-size: 25px;
+  }
+  .choose-description{
+    font-size: 15px;
+  }
 }
 
 .chooseUs .container {
@@ -435,7 +446,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   background-color: #38472a;
   color: #fff;
   margin-bottom: 100px;
@@ -443,6 +454,11 @@
 
 .final-call-icon{
   font-size: 25px;
+}
+@media(max-width:768px){
+  .final-call-icon{
+    margin-bottom: 15px;
+  }
 }
 .final-call h1{
   margin-bottom: 10px;
@@ -456,7 +472,7 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  padding: 10px;
+  padding: 12px;
   background-color: #fff;
   color: #111;
   font-weight: 600;
