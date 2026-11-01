@@ -104,7 +104,7 @@ For a more reliable local development experience, you can open the folder in Vis
 **Ahmed Walid Khalaf**
 
 - GitHub: [@ahmedmir888](https://github.com/ahmedmir888)
-- LinkedIn: [Ahmed Walid Khalaf](www.linkedin.com/in/ahmed-walid-b38703231)
+- LinkedIn: [Ahmed Walid Khalaf](https://www.linkedin.com/in/ahmed-walid-b38703231/)
 - Portfolio: [ahmedwalidkhalaf.netlify.app](https://ahmedwalidkhalaf.netlify.app)
 
 ---
