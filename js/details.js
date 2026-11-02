@@ -4,15 +4,6 @@ const product = productsData.find((product) => product.id === productId);
 
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
-const cartCount = document.querySelector(".cart-count");
-function updateCartCount() {
-  const totalQuantity = cartData.reduce((total, product) => {
-    return total + product.quantity;
-  }, 0);
-  cartCount.textContent = totalQuantity;
-}
-updateCartCount();
-
 function numberOfStars() {
   let stars = "";
   for (let i = 0; i < product.rating; i++) {
