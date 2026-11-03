@@ -17,7 +17,15 @@
   overflow: hidden;
   border-radius: 15px;
 }
-
+@media (max-width: 768px) {
+  .product-details-container {
+    gap: 40px;
+  }
+  .product-image-container {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
 .product-details-image {
   width: 100%;
   height: 100%;
@@ -30,47 +38,51 @@
 
 .product-category {
   color: #6d7e5a;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
 }
 
 .product-name {
-  font-size: 40px;
-  margin: 10px 0;
-}
-
-.product-rating {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.product-rating i {
-  color: #f5b301;
-}
-
-.rating-number {
-  margin-left: 8px;
-  color: #777;
+  font-size: 30px;
 }
 .description-title {
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 .product-description {
-  font-size: 17px;
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  gap: 8px;
 }
-
+.specification-row {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #ddd;
+  color: #666;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+.specification-row:hover {
+  color: #000;
+  border-color: #000;
+}
+@media (max-width: 991px) {
+  .specification-row {
+    text-align: center;
+  }
+}
 .product-price {
   display: block;
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .product-actions {
@@ -94,7 +106,7 @@
   background-color: #38472a;
 }
 .back-btn {
-  position: absolute;
+  position: fixed;
   top: 80px;
   right: 20px;
   display: flex;
@@ -107,6 +119,7 @@
   color: #000;
   padding: 10px 20px;
   border-radius: 20px;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 .back-btn:hover {
@@ -136,5 +149,52 @@
   .product-image-container {
     width: 350px;
     height: 400px;
+  }
+}
+
+.toasted-container {
+  position: fixed;
+  top: 140px;
+  right: 20px;
+  z-index: 20000;
+}
+
+.toast {
+  padding: 15px 10px;
+  background: var(--sage);
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(120%);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.toast-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--white);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .toasted-container {
+    max-width: 230px;
+    text-align: center;
+  }
+  .toast-message {
+    flex-direction: column;
   }
 }

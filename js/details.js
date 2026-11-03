@@ -4,6 +4,16 @@ const product = productsData.find((product) => product.id === productId);
 
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
+const cartCount = document.querySelector(".cart-count");
+// Cart Count Fun to count the total quantity:
+function updateCartCount() {
+  const totalQuantity = cartData.reduce((total, product) => {
+    return total + product.quantity;
+  }, 0);
+  cartCount.textContent = totalQuantity;
+}
+updateCartCount();
+
 const productDetailsContainer = document.querySelector(
   ".product-details-container",
 );
@@ -30,8 +40,44 @@ if (!product) {
   productDetailsImg.src = product.img;
   productCategory.textContent = product.category;
   productName.textContent = product.name;
-  productDescription.textContent = product.description;
+  productDescription.replaceChildren();
+  product.description
+    .split(/[,;]\s*/)
+    .filter((specification) => specification.trim() !== "")
+    .forEach((specification) => {
+      const row = document.createElement("div");
+      row.classList.add("specification-row");
+      row.textContent = specification.trim();
+
+      productDescription.appendChild(row);
+    });
   productPrice.textContent = `Product Price = $${product.price}`;
+}
+
+// Adding Toast Notification
+
+toastedContainer = document.querySelector(".toasted-container");
+
+const toast = document.createElement("div");
+toast.className = "toast";
+
+toastMessage = document.createElement("p");
+toastMessage.className = "toast-message";
+toast.appendChild(toastMessage);
+
+toastedContainer.appendChild(toast);
+
+let toastTimer;
+
+function showToast(message) {
+  toastMessage.innerHTML = message;
+  toast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
 }
 
 addToCartBtn.addEventListener("click", () => {
@@ -45,6 +91,9 @@ addToCartBtn.addEventListener("click", () => {
       quantity: 1,
     });
   }
+  showToast(
+    `<i class='bx bxs-check-square'></i> ${product.name} added to cart successfully!`,
+  );
 
   updateCartCount();
 
