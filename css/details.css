@@ -1,5 +1,6 @@
 .product-details-section {
   padding: 90px 30px 20px;
+  position: relative;
 }
 
 .product-details-container {
@@ -93,6 +94,9 @@
   background-color: #38472a;
 }
 .back-btn {
+  position: absolute;
+  top: 80px;
+  right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,9 +127,6 @@
   }
   .product-name {
     font-size: 30px;
-  }
-  .product-rating {
-    justify-content: center;
   }
   .product-actions {
     justify-content: center;

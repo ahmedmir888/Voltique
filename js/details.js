@@ -4,13 +4,6 @@ const product = productsData.find((product) => product.id === productId);
 
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
-function numberOfStars() {
-  let stars = "";
-  for (let i = 0; i < product.rating; i++) {
-    stars += `<i class="bx bxs-star"></i>`;
-  }
-  return `Rating : ${stars}`;
-}
 const productDetailsContainer = document.querySelector(
   ".product-details-container",
 );
@@ -27,7 +20,6 @@ function productNotFound() {
 const productDetailsImg = document.querySelector(".product-details-image");
 const productCategory = document.querySelector(".product-category");
 const productName = document.querySelector(".product-name");
-const starsNumber = document.querySelector(".stars-number");
 const productDescription = document.querySelector(".product-description");
 const productPrice = document.querySelector(".product-price");
 const addToCartBtn = document.querySelector(".details-add-cart-btn");
@@ -38,7 +30,6 @@ if (!product) {
   productDetailsImg.src = product.img;
   productCategory.textContent = product.category;
   productName.textContent = product.name;
-  starsNumber.innerHTML = numberOfStars();
   productDescription.textContent = product.description;
   productPrice.textContent = `Product Price = $${product.price}`;
 }

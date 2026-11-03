@@ -25,10 +25,6 @@ function renderingProducts(productsData) {
     return;
   }
   productsData.forEach((product) => {
-    let stars = "";
-    for (let i = 0; i < product.rating; i++) {
-      stars += `<i class="bx bxs-star"></i>`;
-    }
 
     let productCard = `
     <article class="product-card">
@@ -45,11 +41,6 @@ function renderingProducts(productsData) {
         </div>
         <h2>${product.name}</h2>
         <div class="rate-and-price">
-            <div class="stars">
-            <span>Rating:</span>
-            ${stars}
-            </div>
-            
             <span class="price">$${product.price}</span>
         </div>
         <div class="product-bottom">
