@@ -30,30 +30,39 @@
   <body>
     <!-- Navbar -->
     <nav class="nav">
-      <div class="logo">
+      <div class="logo" dir="ltr">
         <img src="../imgs/Voltique-logo.png" alt="" />Volti<span>que</span>
       </div>
-
       <ul class="links">
-        <li><a class="link" href="../index.html">Home</a></li>
-        <li><a class="link" href="products.html">Products</a></li>
-        <li><a class="link" href="categories.html">Categories</a></li>
-        <li><a class="link" href="about.html">About</a></li>
-        <li><a class="link" href="contact.html">Contact</a></li>
+        <li><a class="link" href="../index.html" data-i18n="home">Home</a></li>
+        <li>
+          <a class="link" href="products.html" data-i18n="products">Products</a>
+        </li>
+        <li>
+          <a class="link" href="categories.html" data-i18n="categories"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a class="link" href="about.html" data-i18n="about">About</a>
+        </li>
+        <li>
+          <a class="link" href="contact.html" data-i18n="contact">Contact</a>
+        </li>
       </ul>
-
       <div class="nav-icons">
+        <button type="button" class="language-toggle" id="language-toggle">
+          AR
+        </button>
         <a href="wishlist.html" class="favorite-link">
           <i class="bx bx-heart-circle wishlist-icon"></i>
         </a>
-
-        <div class="cart-wrapper">
-          <a href="cart.html"><i class="bx bx-cart-download cart-icon"></i></a>
+        <a href="cart.html" class="cart-wrapper">
+          <i class="bx bx-cart-download cart-icon"></i>
           <span class="cart-count">0</span>
-        </div>
-
+        </a>
         <i class="bx bx-menu menu-icon"></i>
-        <a href="login.html" class="log-in">Log In</a>
+        <a href="login.html" class="log-in" data-i18n="login">Log In</a>
       </div>
     </nav>
 
@@ -86,6 +95,7 @@
       <div class="toasted-container"></div>
     </main>
 
+    <script src="../js/translations.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/product-data.js"></script>
     <script src="../js/details.js"></script>

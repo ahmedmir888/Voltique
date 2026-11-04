@@ -120,6 +120,8 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 .nav .logo span {
   color: var(--sage);
@@ -142,7 +144,7 @@ li {
   font-size: 20px;
   font-weight: 500;
   color: black;
-  padding: 0 30px;
+  padding: 0 20px;
   overflow: hidden;
 }
 @media (min-width: 769px) {
@@ -171,6 +173,22 @@ li {
   align-items: center;
   height: 70px;
   gap: 20px;
+}
+.language-toggle {
+  border: 2px solid var(--dark-green);
+  background-color: transparent;
+  color: var(--dark-green);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.language-toggle:hover {
+  background-color: var(--dark-green);
+  color: #fff;
 }
 .nav-icons .log-in {
   display: flex;
@@ -231,6 +249,10 @@ li {
   .nav .logo img {
     width: 30px;
     height: 30px;
+  }
+  .language-toggle {
+    font-size: 14px;
+    padding: 0px 6px;
   }
   .nav-icons a i {
     font-size: 20px;
@@ -424,6 +446,9 @@ li {
   background-color: var(--dark-green);
   box-shadow: 5px 8px 12px rgba(0 0 0 / 0.4);
 }
+.hero-content a span {
+  font-weight: 500;
+}
 .hero-content a i {
   margin-left: 5px;
 }
@@ -546,15 +571,6 @@ li {
   font-size: 20px;
   font-weight: 700;
 }
-.product-info .rate {
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.product-info .rate i {
-  color: orange;
-}
 .product-card .feature-product-link-div {
   display: flex;
   justify-content: flex-start;
@@ -568,7 +584,7 @@ li {
   gap: 5px;
   padding: 10px;
   border-radius: 15px;
-  background-color:#e6e6e6;
+  background-color: #e6e6e6;
   color: var(--black);
   font-size: 16px;
   font-weight: 500;
@@ -578,6 +594,9 @@ li {
 .feature-product-link:hover {
   background-color: var(--sage);
   color: white;
+}
+html[dir="rtl"] .feature-product-link i {
+  transform: rotate(180deg);
 }
 .feature-product-link:hover i {
   animation: arrow-move 1s linear infinite;
@@ -589,6 +608,21 @@ li {
   }
   50% {
     transform: translateX(5px);
+  }
+}
+
+/* RTL Animation */
+
+html[dir="rtl"] .feature-product-link:hover i {
+  animation: arrow-move-rtl 1s linear infinite;
+}
+@keyframes arrow-move-rtl {
+  0%,
+  100% {
+    transform: rotate(180deg) translateX(0);
+  }
+  50% {
+    transform: rotate(180deg) translateX(5px);
   }
 }
 
@@ -640,8 +674,8 @@ li {
   height: 250px;
   overflow: hidden;
 }
-@media(max-width:768px){
-  .categories .card-img{
+@media (max-width: 768px) {
+  .categories .card-img {
     height: 320px;
   }
 }
@@ -745,6 +779,7 @@ li {
 .brands-track {
   display: flex;
   width: max-content;
+  gap: 30px;
   animation: scrollBrands 20s linear infinite;
 }
 
@@ -784,7 +819,7 @@ li {
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 15px));
   }
 }
 /* end brands section  */
@@ -874,11 +909,17 @@ li {
 }
 .footer .footer-logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: white;
   font-size: 40px;
   margin: -5px 0 20px;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .footer .footer-logo {
+  justify-content: flex-end;
 }
 .footer-logo img {
   width: 40px;
@@ -886,11 +927,6 @@ li {
 }
 .footer .footer-logo span {
   color: var(--sage);
-}
-@media (min-width: 769px) {
-  .footer .footer-logo {
-    justify-content: flex-start;
-  }
 }
 .footer .column p {
   color: var(--white);
@@ -935,26 +971,15 @@ li {
 .footer .column .links li:not(:last-child) {
   border-bottom: 1px solid var(--white);
 }
-.footer .column .links li:hover {
-  padding-left: 10px;
-}
-.footer .column .links li:hover a,
-.footer .column .links li:hover a::before {
-  color: var(--sage);
-}
 .footer .column .links li a {
   color: white;
   transition: 0.3s;
   position: relative;
   font-size: 18px;
 }
-
-.footer .column .links li a::before {
-  content: ">";
-  font-weight: 900;
-  margin-right: 20px;
-  color: var(--white);
-  transition: 0.3s ease;
+.footer .column .links li:hover a {
+  color: var(--sage);
+  padding-left: 15px;
 }
 
 .footer .column .line {

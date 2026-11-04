@@ -63,6 +63,12 @@
   position: absolute;
   right: 20px;
   cursor: pointer;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .search-products i {
+  left: 20px;
 }
 
 .filter-products select,

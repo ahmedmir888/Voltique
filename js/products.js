@@ -19,7 +19,7 @@ function renderingProducts(productsData) {
   if (productsData.length === 0) {
     productsGrid.innerHTML = `
     <div class="product-showing-no-result">
-    <p class="product-no-results">There is no product in this name please Write The Name Correctlly...</p>
+    <p class="product-no-results" data-i18n="noProductsFound">There is no product in this name please Write The Name Correctlly...</p>
     </div>
     `;
     return;
@@ -46,9 +46,9 @@ function renderingProducts(productsData) {
         <div class="product-bottom">
   
           <button type="button" class="add-cart-btn" data-id="${product.id}">
-            Add <i class='bx bx-cart-download'></i>
+            <span data-i18n="add">Add</span> <i class='bx bx-cart-download'></i>
           </button>
-          <a href="details.html?id=${product.id}" class="details-btn">
+          <a href="details.html?id=${product.id}" class="details-btn" data-i18n="details">
            Details
           </a>
         </div>
@@ -57,6 +57,7 @@ function renderingProducts(productsData) {
       `;
     productsGrid.innerHTML += productCard;
   });
+  applyLanguage(currentLanguage);
 }
 // Update Cart Function To Check if the product is exist or no and increase the quantity
 function updateCart(product) {

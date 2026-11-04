@@ -74,3 +74,37 @@ const observer = new IntersectionObserver(
 revealElement.forEach((element) => {
   observer.observe(element);
 });
+
+// Translation Logic
+
+let currentLanguage = localStorage.getItem("language") || "en";
+function applyLanguage(language) {
+  const elements = document.querySelectorAll("[data-i18n]");
+
+  elements.forEach((element) => {
+    const key = element.dataset.i18n;
+    element.textContent = translations[language][key];
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const key = element.dataset.i18nPlaceholder;
+    element.placeholder = translations[language][key];
+  });
+  document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+  const languageToggle = document.querySelector("#language-toggle");
+
+  languageToggle.textContent = language === "en" ? "AR" : "EN";
+
+  currentLanguage = language;
+
+  localStorage.setItem("language", language);
+}
+
+const languageToggle = document.querySelector("#language-toggle");
+
+languageToggle.addEventListener("click", () => {
+  const newLanguage = currentLanguage === "en" ? "ar" : "en";
+
+  applyLanguage(newLanguage);
+});
+
+applyLanguage(currentLanguage);
