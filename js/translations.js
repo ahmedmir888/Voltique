@@ -141,6 +141,49 @@ const translations = {
 
       25: "Compatibility: PlayStation 5, PC and supported mobile devices, Connectivity: Bluetooth and USB-C, Feedback: Haptic feedback technology, Triggers: Adaptive triggers, Audio: Built-in microphone and speaker, Features: Integrated mute button, Motion sensors and Create button, Battery: Rechargeable built-in battery",
     },
+    aboutStorySubTitle: "OUR STORY",
+    aboutStoryTitle: "More Than Technology",
+    aboutStorySpan: "A Better Everyday.",
+    aboutStoryDescription1:
+      "At Voltique, we beleive technology should make everyday like simpler, smarter, and more connected. We bring togther modern electronics and smart devices to help you discover the technology that fits your lifestyle.",
+    aboutStoryDescription2:
+      "From essential everyday devices to the latest innovations, our goal is to make discoveration quality technology a seamless and enjoyable experience.",
+    aboutStoryExploreBtn: "Explore Our Products",
+    aboutOurVisionSubTitle: "OUR MISSION & VISION",
+    aboutOurVisionTitle: "Building a Smarter,",
+    aboutOurVisionSpan: "More Connected Tomorrow",
+    aboutOurVisionDescription:
+      "At Voltique, We're driven by a simple belief - that the right technology can make life easier, more enjoyable, and more connected",
+    aboutOurVisionLeftSubTitle: "OUR MISSION",
+    aboutOurVisionLeftTitle: "Making Technology Accessible.",
+    aboutOurVisionLeftDescription:
+      "Our mission is to make discovering and choosing quality technology simple, convenient, and enjoyable. We bring togther reliable products that fit differnet needs and everyday lifestyle.",
+
+    aboutOurVisionRightSubTitle: "OUR VISION",
+    aboutOurVisionRightTitle: "A Smarter, More Connected Future.",
+    aboutOurVisionRightDescription:
+      "We envision a world where the right technology empowers people to live smarter, stay connected, and make the most of every day.",
+    aboutChooseUsSubTitle: "THE VOLTIQUE DIFFERENCE",
+    aboutChooseUsTitle: "Why Choose Voltique ?",
+    aboutChooseUsDescription:
+      "A better way to discover and shop for technology",
+    aboutChooseUsQualityTitle: "Quality Products",
+    aboutChooseUsQualityDescription:
+      "Carefully selected devices to meet your everyday technology needs",
+    aboutChooseUsShoppingTitle: "Easy Shopping",
+    aboutChooseUsShoppingDescription:
+      "A simple and intuitive shopping experience from browsing to checkout.",
+    aboutChooseUsValueTitle: "Grate Value",
+    aboutChooseUsValueDescription:
+      "A range of options to help you find technology that suits your budget.",
+    aboutChooseUsCostomerTitle: "Customer First",
+    aboutChooseUsCostmoerDescription:
+      "Designed around your needs, with clarity and convenience at every step.",
+    aboutReadyTitle: "Ready To Find Your Next",
+    aboutReadySpan: "Favorite Device?",
+    aboutReadyDescription:
+      "Explore our collection of electronics and discover technology that fits your everyday life.",
+    aboutReadyBtn: "Explore Our Products",
   },
   ar: {
     home: "الرئيسية",
@@ -253,35 +296,77 @@ const translations = {
 
       8: "الشاشة: 14 أو 16 بوصة بتقنية IPS أو OLED حسب التكوين، المعالج: Intel Core أو AMD Ryzen، الذاكرة العشوائية: 16GB عادةً، التخزين: SSD بسعة 512GB عادةً، الرسوميات: معالج رسومي مدمج، الاتصال: Wi-Fi وBluetooth، المنافذ: USB وHDMI، نظام التشغيل: Windows 11. قد تختلف المواصفات حسب الطراز",
       9: "النوع: سماعات رأس لاسلكية بتصميم يغطي الأذن، المحركات الصوتية: 30mm، إلغاء الضوضاء: تقنية متطورة لإلغاء الضوضاء النشط، الصوت: برامج ترميز صوتية لاسلكية عالية الجودة، الاتصال: Bluetooth 5.3، الميزات: الاتصال بأجهزة متعددة والتحكم باللمس، عمر البطارية: يصل إلى 30 ساعة مع تفعيل إلغاء الضوضاء و40 ساعة بدونه، التوصيل: منفذ صوت 3.5mm",
-  
+
       10: "الصوت: نظام مكبرات صوت ثنائي الاتجاه، إلغاء الضوضاء: إلغاء الضوضاء النشط مع التحكم التكيفي، الميزات: صوت محيطي 360 Audio، الاتصال: Bluetooth 5.4، الميكروفونات: ستة ميكروفونات، مقاومة الماء: معيار IP57، الشحن: USB-C والشحن اللاسلكي",
-  
+
       11: "الشاشة: Mini LED بحجم 55 بوصة، الدقة: 4K Ultra HD، معالج الصورة: Sony XR Processor، تقنية الإضاءة الخلفية: XR Backlight Master Drive، HDR: دعم Dolby Vision وHDR10 وHLG، نظام التشغيل: Google TV، الصوت: Acoustic Multi-Audio، الألعاب: دعم دقة 4K بمعدل 120Hz وتقنيتي VRR وALLM",
-  
+
       12: "الشاشة: OLED بدقة 4K Ultra HD، معالجة الصور: تقنية سامسونج المتقدمة لمعالجة الصور، HDR: دعم تقنية HDR، نظام التشغيل: Tizen Smart TV، الصوت: نظام مكبرات صوت متعدد القنوات مدمج، الألعاب: Samsung Gaming Hub وميزات الألعاب، الاتصال: منافذ HDMI وUSB، الميزات: تطبيقات التلفاز الذكي وخدمات البث",
       13: "الشاشة: LTPO OLED، الأحجام: 42mm و46mm، المعالج: Apple S10، المستشعرات: مستشعرات متطورة للصحة واللياقة البدنية، الاتصال: GPS مع خيار الاتصال الخلوي، مقاومة الماء: حتى عمق 50 مترًا، نظام التشغيل: watchOS، عمر البطارية: يصل إلى 24 ساعة",
-  
+
       14: "الشاشة: Super AMOLED، الأحجام: 40mm و44mm، المعالج: Exynos W1000، الذاكرة العشوائية: 2GB، التخزين: 32GB، نظام التشغيل: Wear OS، المستشعرات: مستشعرات تتبع الصحة واللياقة البدنية، الاتصال: GPS وBluetooth، الحماية: معيارا 5ATM وIP68",
-  
+
       15: "النوع: فأرة لاسلكية بتصميم مريح لليد، المستشعر: Darkfield عالي الدقة، الحساسية: تصل إلى 8000 DPI، عجلة التمرير: تقنية MagSpeed الكهرومغناطيسية، الأزرار: سبعة أزرار قابلة للبرمجة، الاتصال: Bluetooth ومستقبل USB من نوع Logi Bolt، دعم الأجهزة المتعددة: حتى ثلاثة أجهزة، عمر البطارية: يصل إلى 70 يومًا، الشحن: USB-C",
-  
+
       16: "الوزن: حوالي 60g، المستشعر: مستشعر HERO 2 البصري، الحساسية: تصل إلى 32,000 DPI، المفاتيح: مفاتيح هجينة بتقنية LIGHTFORCE، الاتصال: تقنية LIGHTSPEED اللاسلكية، معدل الاستقصاء: يصل إلى 2000Hz، الأزرار: خمسة أزرار قابلة للبرمجة، عمر البطارية: يصل إلى 95 ساعة، الشحن: USB-C",
       17: "التصميم: لوحة مفاتيح ميكانيكية مدمجة بنسبة 75%، المفاتيح: 84 مفتاحًا، الاتصال: Bluetooth واتصال سلكي عبر USB-C، التوافق: دعم QMK وVIA، المفاتيح الميكانيكية: خيارات متعددة لأنواع المفاتيح، الإضاءة الخلفية: تتوفر بإصدارات مختلفة من الإضاءة، البطارية: بطارية قابلة لإعادة الشحن بسعة 4000mAh، الميزات: مفاتيح قابلة للتخصيص واتصال لاسلكي بأجهزة متعددة",
-  
+
       18: "التصميم: كرسي ألعاب مريح بظهر مرتفع، التنجيد: تختلف الخامة حسب الطراز، الدعم: دعم أسفل الظهر ومسند الرأس، مساند الذراعين: قابلة للتعديل، الإمالة: مسند ظهر وآلية ميل قابلان للتعديل، الارتفاع: ارتفاع المقعد قابل للتعديل، القاعدة: قاعدة متحركة بخمس نقاط ارتكاز، الميزات: مصمم لجلسات اللعب والعمل الطويلة أمام الكمبيوتر",
-  
+
       19: "التصميم: كرسي مكتب مريح، الخامة: شبكة أو تنجيد مبطن حسب الطراز، دعم الظهر: دعم لمنطقة أسفل الظهر، مساند الذراعين: مدمجة أو قابلة للتعديل، الارتفاع: تعديل هوائي لارتفاع المقعد، الإمالة: آلية ميل قابلة للتعديل، القاعدة: قاعدة متحركة بخمس نقاط ارتكاز مع عجلات، الميزات: مصمم لتوفير الراحة أثناء الاستخدام المكتبي اليومي",
-  
+
       20: "المعالج: AMD Zen 2 بوحدة معالجة مركزية ذات 8 أنوية، الرسوميات: AMD RDNA 2 GPU، الذاكرة: 16GB GDDR6، التخزين: قرص SSD عالي السرعة بسعة تختلف حسب الإصدار، الدقة: يدعم الألعاب بدقة تصل إلى 4K ومعدل 120Hz، الصوت: تقنية Tempest 3D AudioTech، وحدة التحكم: وحدة تحكم لاسلكية DualSense، الاتصال: Wi-Fi وBluetooth وHDMI",
       21: "النوع: ميكروفون مكثف يعمل عبر USB، دقة الصوت: تصل إلى 16-bit/48kHz، الأنماط الصوتية: ستيريو، متعدد الاتجاهات، قلبي وثنائي الاتجاه، الاستجابة الترددية: 20Hz–20kHz، الميزات: قاعدة مدمجة لامتصاص الاهتزازات، مستشعر للكتم باللمس ومؤشر حالة LED، المراقبة الصوتية: منفذ سماعات 3.5mm، الاتصال: USB",
-  
+
       22: "المستشعر: HERO 25K البصري، الحساسية: تصل إلى 25,600 DPI، الاتصال: تقنية LIGHTSPEED اللاسلكية، المفاتيح: مفاتيح هجينة بتقنية LIGHTFORCE، الأزرار: 13 زرًا قابلًا للبرمجة، الإضاءة: LIGHTSYNC RGB، عجلة التمرير: تمرير بوضعين، عمر البطارية: يصل إلى 120 ساعة دون إضاءة RGB، الشحن: USB-C مع دعم POWERPLAY",
-  
+
       23: "التوافق: PlayStation 5 وPlayStation 4 وأجهزة Windows PC، العصي التناظرية: تقنية Hall Effect، أزرار التحكم الخلفية: مستشعرات Hall Effect، التصميم: ترتيب غير متماثل للعصي التناظرية، الميزات: ملفات تعريف قابلة للبرمجة، أوزان قابلة للتعديل ومحددات لحركة أزرار التحكم، الصوت: منفذ سماعات 3.5mm، عناصر التحكم: أزرار قابلة للتخصيص",
-  
+
       24: "التوافق: PlayStation 4 والأجهزة المتوافقة، الاتصال: Bluetooth لاسلكي واتصال USB، لوحة اللمس: لوحة لمس مدمجة، مستشعرات الحركة: استشعار حركة سداسي المحاور، الصوت: مكبر صوت أحادي مدمج ومنفذ سماعات 3.5mm، الميزات: شريط إضاءة وزر Share واهتزاز تفاعلي، البطارية: بطارية قابلة لإعادة الشحن تدوم حوالي 6–8 ساعات",
-  
+
       25: "التوافق: PlayStation 5 وأجهزة الكمبيوتر والأجهزة المحمولة المدعومة، الاتصال: Bluetooth وUSB-C، الاستجابة: تقنية الاهتزاز اللمسي Haptic Feedback، أزرار التحكم: Adaptive Triggers، الصوت: ميكروفون ومكبر صوت مدمجان، الميزات: زر كتم مدمج ومستشعرات حركة وزر Create، البطارية: بطارية مدمجة قابلة لإعادة الشحن",
     },
+    aboutStorySubTitle: "قصتنا",
+    aboutStoryTitle: "أكثر من مجرد تكنولوجيا",
+    aboutStorySpan: "حياة يومية أفضل.",
+    aboutStoryDescription1:
+      "في فولتيك، نؤمن بأن التكنولوجيا يجب أن تجعل الحياة اليومية أبسط، وأذكى، وأكثر اتصالاً. نحن نجمع بين الإلكترونيات الحديثة والأجهزة الذكية لنساعدك في اكتشاف التقنية التي تناسب أسلوب حياتك.",
+    aboutStoryDescription2:
+      "من الأجهزة اليومية الأساسية إلى أحدث الابتكارات، هدفنا هو جعل اكتشاف التقنيات عالية الجودة تجربة سلسة وممتعة.",
+    aboutStoryExploreBtn: "استكشف منتجاتنا",
+    aboutOurVisionSubTitle: "رؤيتنا و مهمتنا",
+    aboutOurVisionTitle: "بناء غدٍ أكثر ذكاءً,",
+    aboutOurVisionSpan: "وأكثر ترابطاً",
+    aboutOurVisionDescription:
+      "في فولتيك، يقودنا إيمان بسيط؛ وهو أن التكنولوجيا المناسبة يمكنها أن تجعل الحياة أسهل، وأكثر متعة، وأكثر ترابطاً.",
+    aboutOurVisionLeftSubTitle: "مهمتنا",
+    aboutOurVisionLeftTitle: "جعل التكنولوجيا في متناول الجميع.",
+    aboutOurVisionLeftDescription:
+      "رسالتنا هي جعل اكتشاف واختيار التقنيات عالية الجودة أمراً بسيطاً، ومريحاً، وممتعاً. نحن نجمع بين المنتجات الموثوقة التي تناسب مختلف الاحتياجات ونمط الحياة اليومي.",
+
+    aboutOurVisionRightSubTitle: "رؤيتنا",
+    aboutOurVisionRightTitle: "مستقبل أكثر ذكاءً وأكثر ترابطاً.",
+    aboutOurVisionRightDescription:
+      "نحن نتطلع إلى عالم تُمكِّن فيه التكنولوجيا المناسبة الأفراد من العيش بذكاء أكبر، والبقاء على اتصال، وتحقيق أقصى استفادة من كل يوم.",
+    aboutChooseUsSubTitle: "ما يميز فولتيك",
+    aboutChooseUsTitle: "لماذا تختار فولتيك؟",
+    aboutChooseUsDescription: "طريقة أفضل لاكتشاف وتسوق التقنيات",
+    aboutChooseUsQualityTitle: "جودة المنتجات",
+    aboutChooseUsQualityDescription:
+      "أجهزة مختارة بعناية لتلبية احتياجاتك التكنولوجية اليومية",
+    aboutChooseUsShoppingTitle: "سهل التسوق",
+    aboutChooseUsShoppingDescription:
+      "تجربة تسوق بسيطة وسلسة من التصفح وحتى الدفع.",
+    aboutChooseUsValueTitle: "قيمة عالية",
+    aboutChooseUsValueDescription:
+      "مجموعة متنوعة من الخيارات لمساعدتك في العثور على التقنية التي تناسب ميزانيتك.",
+    aboutChooseUsCostomerTitle: "العميل أولاً",
+    aboutChooseUsCostmoerDescription:
+      "مُصمّم خصيصاً لتلبية احتياجاتك، مع توفير الوضوح والراحة في كل خطوة.",
+    aboutReadyTitle: "جاهز لتجد ",
+    aboutReadySpan: "جهازك المفضل!",
+    aboutReadyDescription:
+      "استكشف مجموعتنا من الإلكترونيات واكتشف التقنية التي تناسب حياتك اليومية.",
+    aboutReadyBtn: "استكشف منتجاتنا",
   },
 };

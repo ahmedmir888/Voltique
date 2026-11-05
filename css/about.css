@@ -60,6 +60,9 @@
   font-size: 20px;
   transition: transform 0.3s ease;
 }
+html[dir="rtl"] .story-btn i {
+  transform: rotate(180deg);
+}
 .story-btn:hover {
   background-color: transparent;
   color: #38472a;
@@ -78,6 +81,19 @@
     transform: translateX(5px);
   }
 }
+html[dir="rtl"] .story-btn:hover i {
+  transform: translateX(4px);
+  animation: arrow-move-rtl 0.7s linear infinite;
+}
+@keyframes arrow-move-rtl {
+  0%,
+  100% {
+    transform: translateX(0) rotate(180deg);
+  }
+  50% {
+    transform: translateX(-5px) rotate(180deg);
+  }
+}
 .story-img {
   position: relative;
   padding: 20px;
@@ -92,9 +108,9 @@
   object-fit: cover;
 }
 
-@media(max-width:991px){
-  .our-story{
-   padding: 140px 0 0;
+@media (max-width: 991px) {
+  .our-story {
+    padding: 140px 0 0;
   }
 }
 
@@ -149,7 +165,8 @@
   font-weight: 700;
   letter-spacing: 2px;
 }
-.ourVision-content .ourVision-title {
+.ourVision-content .ourVision-title span{
+  display: block;
   margin: 0;
   color: #111111;
   font-size: clamp(28px, 3.5vw, 40px);
@@ -183,7 +200,7 @@
     transform 0.3s ease,
     background-color 0.3s ease,
     box-shadow 0.3s ease;
-    cursor: pointer;
+  cursor: pointer;
 }
 .our-vision-mission .right {
   background-color: #f1f3ed;
@@ -376,11 +393,11 @@
   letter-spacing: 1.3px;
 }
 
-@media(max-width:768px){
-  .choose-title{
+@media (max-width: 768px) {
+  .choose-title {
     font-size: 25px;
   }
-  .choose-description{
+  .choose-description {
     font-size: 15px;
   }
 }
@@ -429,17 +446,17 @@
   color: #fff;
 }
 
-@media(max-width:768px){
-  .choose-box{
+@media (max-width: 768px) {
+  .choose-box {
     text-align: center;
   }
-  .choose-box-title{
+  .choose-box-title {
     justify-content: center;
   }
 }
 
 /* Start Final Call  */
-.final-call{
+.final-call {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -452,22 +469,25 @@
   margin-bottom: 100px;
 }
 
-.final-call-icon{
+.final-call-icon {
   font-size: 25px;
 }
-@media(max-width:768px){
-  .final-call-icon{
+@media (max-width: 768px) {
+  .final-call-icon {
     margin-bottom: 15px;
   }
 }
-.final-call h1{
+.final-call h1 {
   margin-bottom: 10px;
 }
-.final-call p{
+.final-call h1 span{
+  display: block;
+}
+.final-call p {
   letter-spacing: 0.5px;
   margin-bottom: 15px;
 }
-.final-call a{
+.final-call .final-call-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -477,10 +497,14 @@
   color: #111;
   font-weight: 600;
   border-radius: 12px;
-  transition: background-color 0.3s ease,
-  transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
-.final-call a:hover{
+html[dir="rtl"] .final-call .final-call-btn i{
+  transform: rotate(180deg);
+}
+.final-call .final-call-btn:hover {
   background-color: #ddd;
   transform: translateY(-1px);
 }
