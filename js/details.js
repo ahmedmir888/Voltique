@@ -21,8 +21,10 @@ const productDetailsContainer = document.querySelector(
 function productNotFound() {
   return `
     <div class="product-not-found">
-      <h2>There is no Products Yet</h2>
-    <a href="products.html">Go Buy Somthing 😉</a>
+      <h2>${translations[currentLanguage].productNotFound}</h2>
+      <a href="products.html">
+        ${translations[currentLanguage].goBuySomething}
+      </a>
     </div>
   `;
 }
@@ -34,25 +36,38 @@ const productDescription = document.querySelector(".product-description");
 const productPrice = document.querySelector(".product-price");
 const addToCartBtn = document.querySelector(".details-add-cart-btn");
 
-if (!product) {
-  productDetailsContainer.innerHTML = productNotFound();
-} else {
-  productDetailsImg.src = product.img;
-  productCategory.textContent = product.category;
-  productName.textContent = product.name;
-  productDescription.replaceChildren();
-  product.description
-    .split(/[,;]\s*/)
-    .filter((specification) => specification.trim() !== "")
-    .forEach((specification) => {
-      const row = document.createElement("div");
-      row.classList.add("specification-row");
-      row.textContent = specification.trim();
+function renderProductDetails() {
+  if (!product) {
+    productDetailsContainer.innerHTML = productNotFound();
+  } else {
+    productDetailsImg.src = product.img;
 
-      productDescription.appendChild(row);
-    });
-  productPrice.textContent = `Product Price = $${product.price}`;
+    productCategory.textContent = translateCategory(product.category);
+
+    productName.textContent =
+      translations[currentLanguage].productNames[product.id];
+
+    productDescription.replaceChildren();
+
+    const description =
+      translations[currentLanguage].productDescriptions[product.id];
+
+    description
+      .split(/[,،;]\s*/)
+      .filter((specification) => specification.trim() !== "")
+      .forEach((specification) => {
+        const row = document.createElement("div");
+        row.classList.add("specification-row");
+        row.textContent = specification.trim();
+
+        productDescription.appendChild(row);
+      });
+
+    productPrice.textContent = `${translations[currentLanguage].productPrice} = $${product.price}`;
+  }
 }
+
+renderProductDetails();
 
 // Adding Toast Notification
 
@@ -92,7 +107,9 @@ addToCartBtn.addEventListener("click", () => {
     });
   }
   showToast(
-    `<i class='bx bxs-check-square'></i> ${product.name} added to cart successfully!`,
+    `<i class='bx bxs-check-square'></i> ${
+      translations[currentLanguage].productNames[product.id]
+    } ${translations[currentLanguage].toastAddedToCart}`,
   );
 
   updateCartCount();

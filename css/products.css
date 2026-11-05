@@ -68,7 +68,7 @@
 }
 
 html[dir="rtl"] .search-products i {
-  left: 20px;
+  right: 200px;
 }
 
 .filter-products select,
@@ -271,7 +271,7 @@ html[dir="rtl"] .search-products i {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   margin: 0;
   color: var(--white);
   font-size: 16px;

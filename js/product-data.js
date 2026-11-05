@@ -41,26 +41,6 @@ const productsData = [
   },
   {
     id: 5,
-    name: "Sony WH-1000XM6",
-    category: "Audio",
-    price: 450,
-    rating: 5,
-    img: "../imgs/Sony WH-1000XM6.jfif",
-    description:
-      "Type: Over-ear wireless headphones, Drivers: 30mm, Noise Cancellation: Advanced Active Noise Cancellation, Audio: High-quality wireless audio codecs, Connectivity: Bluetooth 5.3, Features: Multipoint connection and touch controls, Battery Life: Up to 30 hours with ANC and 40 hours without ANC, Connection: 3.5mm audio jack",
-  },
-  {
-    id: 6,
-    name: "Samsung Galaxy Buds3 Pro",
-    category: "Audio",
-    price: 120,
-    rating: 5,
-    img: "../imgs/Samsung Galaxy Buds3 Pro.jfif",
-    description:
-      "Audio: Two-way speaker system, Noise Cancellation: Active Noise Cancellation with adaptive noise control, Features: 360 Audio, Connectivity: Bluetooth 5.4, Microphones: Six microphones, Water Resistance: IP57, Charging: USB-C and wireless charging",
-  },
-  {
-    id: 7,
     name: "Apple MacBook Air M4",
     category: "Laptop",
     price: 1000,
@@ -70,34 +50,54 @@ const productsData = [
       "Processor: Apple M4 chip with up to 10-core CPU and GPU depending on configuration, Display: 13.6-inch Liquid Retina, RAM: 16GB Unified Memory, Storage: 256GB SSD, Camera: 12MP Center Stage, Connectivity: Wi-Fi 6E, Ports: Thunderbolt and MagSafe, Battery Life: Up to 18 hours",
   },
   {
-    id: 8,
+    id: 6,
     name: "ASUS TUF Gaming A15",
     category: "Laptop",
     price: 1200,
     rating: 5,
     img: "../imgs/ASUS TUF Gaming A15.jfif",
     description:
-      "Display: 15.6-inch Full HD high-refresh-rate display, Processor: AMD Ryzen 7, Graphics: NVIDIA GeForce RTX GPU depending on configuration, RAM: DDR5 memory, Storage: NVMe SSD, Cooling: Dual-fan cooling system, Connectivity: Wi-Fi 6, Ports: Multiple USB and HDMI ports, Operating System: Windows 11. Specifications may vary by model",
+    "Display: 15.6-inch Full HD high-refresh-rate display, Processor: AMD Ryzen 7, Graphics: NVIDIA GeForce RTX GPU depending on configuration, RAM: DDR5 memory, Storage: NVMe SSD, Cooling: Dual-fan cooling system, Connectivity: Wi-Fi 6, Ports: Multiple USB and HDMI ports, Operating System: Windows 11. Specifications may vary by model",
   },
   {
-    id: 9,
+    id: 7,
     name: "Dell XPS 13",
     category: "Laptop",
     price: 1400,
     rating: 5,
     img: "../imgs/Dell XPS 13.jfif",
     description:
-      "Display: 13.4-inch high-resolution display, Processor: Intel Core Ultra depending on generation, Graphics: Integrated Intel graphics, RAM: Typically 16GB, Storage: Typically 512GB SSD, Connectivity: Thunderbolt ports and Wi-Fi, Operating System: Windows 11, Design: Premium lightweight ultrabook. Specifications may vary by model",
+    "Display: 13.4-inch high-resolution display, Processor: Intel Core Ultra depending on generation, Graphics: Integrated Intel graphics, RAM: Typically 16GB, Storage: Typically 512GB SSD, Connectivity: Thunderbolt ports and Wi-Fi, Operating System: Windows 11, Design: Premium lightweight ultrabook. Specifications may vary by model",
   },
   {
-    id: 10,
+    id: 8,
     name: "Lenovo IdeaPad Slim 5",
     category: "Laptop",
     price: 800,
     rating: 5,
     img: "../imgs/Lenovo IdeaPad Slim 5.jfif",
     description:
-      "Display: 14-inch or 16-inch IPS or OLED depending on configuration, Processor: Intel Core or AMD Ryzen, RAM: Typically 16GB, Storage: Typically 512GB SSD, Graphics: Integrated graphics, Connectivity: Wi-Fi and Bluetooth, Ports: USB and HDMI, Operating System: Windows 11. Specifications may vary by model",
+    "Display: 14-inch or 16-inch IPS or OLED depending on configuration, Processor: Intel Core or AMD Ryzen, RAM: Typically 16GB, Storage: Typically 512GB SSD, Graphics: Integrated graphics, Connectivity: Wi-Fi and Bluetooth, Ports: USB and HDMI, Operating System: Windows 11. Specifications may vary by model",
+  },
+  {
+    id: 9,
+    name: "Sony WH-1000XM6",
+    category: "Audio",
+    price: 450,
+    rating: 5,
+    img: "../imgs/Sony WH-1000XM6.jfif",
+    description:
+      "Type: Over-ear wireless headphones, Drivers: 30mm, Noise Cancellation: Advanced Active Noise Cancellation, Audio: High-quality wireless audio codecs, Connectivity: Bluetooth 5.3, Features: Multipoint connection and touch controls, Battery Life: Up to 30 hours with ANC and 40 hours without ANC, Connection: 3.5mm audio jack",
+  },
+  {
+    id: 10,
+    name: "Samsung Galaxy Buds3 Pro",
+    category: "Audio",
+    price: 120,
+    rating: 5,
+    img: "../imgs/Samsung Galaxy Buds3 Pro.jfif",
+    description:
+      "Audio: Two-way speaker system, Noise Cancellation: Active Noise Cancellation with adaptive noise control, Features: 360 Audio, Connectivity: Bluetooth 5.4, Microphones: Six microphones, Water Resistance: IP57, Charging: USB-C and wireless charging",
   },
   {
     id: 11,

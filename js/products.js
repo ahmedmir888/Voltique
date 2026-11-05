@@ -25,7 +25,6 @@ function renderingProducts(productsData) {
     return;
   }
   productsData.forEach((product) => {
-
     let productCard = `
     <article class="product-card">
       <div class="product-img">
@@ -34,12 +33,12 @@ function renderingProducts(productsData) {
   
       <div class="product-information">
         <div class="cate-favo">
-        <span class="product-category">${product.category}</span>
+        <span class="product-category">${translateCategory(product.category)}</span>
         <i class="bx bxs-heart add-favorite-icon ${
           favorites.includes(Number(product.id)) ? "active" : ""
         }" data-id="${product.id}"></i>
         </div>
-        <h2>${product.name}</h2>
+        <h2>${translations[currentLanguage].productNames[product.id]}</h2>
         <div class="rate-and-price">
             <span class="price">$${product.price}</span>
         </div>
@@ -158,7 +157,7 @@ productsGrid.addEventListener("click", (event) => {
   updateCart(product);
 
   showToast(
-    `<i class='bx bxs-check-square'></i> ${product.name} added to cart successfully!`,
+    `<i class='bx bxs-check-square'></i> ${translations[currentLanguage].productNames[product.id]} ${translations[currentLanguage].toastAddedToCart}`,
   );
 });
 
@@ -201,8 +200,10 @@ productsGrid.addEventListener("click", (event) => {
   if (!product) return;
 
   showToast(
-    isFavorite
-      ? `${product.name} removed from WishList`
-      : `${product.name} added to WishList`,
+    `${
+      translations[currentLanguage][
+        isFavorite ? "toastRemovedFromWishlist" : "toastAddedToWishlist"
+      ]
+    } `,
   );
 });

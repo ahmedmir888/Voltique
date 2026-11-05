@@ -77,6 +77,23 @@ revealElement.forEach((element) => {
 
 // Translation Logic
 
+function translateCategory(category) {
+  const categoryKeys = {
+    Smartphone: "smartphones",
+    Laptop: "laptops",
+    Television: "televisions",
+    Audio: "audio",
+    Smartwatch: "accessories",
+    Accessories: "accessories",
+    gaming: "gaming",
+    accessories: "accessories",
+  };
+
+  const key = categoryKeys[category];
+
+  return translations[currentLanguage][key] || category;
+}
+
 let currentLanguage = localStorage.getItem("language") || "en";
 function applyLanguage(language) {
   const elements = document.querySelectorAll("[data-i18n]");
@@ -105,6 +122,29 @@ languageToggle.addEventListener("click", () => {
   const newLanguage = currentLanguage === "en" ? "ar" : "en";
 
   applyLanguage(newLanguage);
+
+  if (typeof renderProductDetails === "function") {
+    renderProductDetails();
+  }
+
+  if (typeof applyProductsOptions === "function") {
+    applyProductsOptions();
+  }
 });
 
 applyLanguage(currentLanguage);
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    const savedLanguage = localStorage.getItem("language") || "en";
+
+    applyLanguage(savedLanguage);
+
+    if (typeof applyProductsOptions === "function") {
+      applyProductsOptions();
+    }
+    if (typeof renderProductDetails === "function") {
+      renderProductDetails();
+    }
+  }
+});

@@ -69,12 +69,20 @@
     color 0.3s ease,
     border-color 0.3s ease;
 }
+
+html[dir="rtl"] .specification-row {
+  direction: rtl;
+  text-align: right;
+}
 .specification-row:hover {
   color: #000;
   border-color: #000;
 }
 @media (max-width: 991px) {
   .specification-row {
+    text-align: center;
+  }
+  html[dir="rtl"] .specification-row{
     text-align: center;
   }
 }

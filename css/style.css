@@ -925,6 +925,16 @@ html[dir="rtl"] .footer .footer-logo {
   width: 40px;
   height: 40px;
 }
+@media(max-width:768px){
+  .footer .footer-logo{
+    justify-content: center;
+  }
+}
+@media(max-width:768px){
+  html[dir="rtl"] .footer .footer-logo{
+    justify-content: center;
+  }
+}
 .footer .footer-logo span {
   color: var(--sage);
 }
