@@ -77,6 +77,7 @@ revealElement.forEach((element) => {
 
 // Translation Logic
 
+// translate function for the category
 function translateCategory(category) {
   const categoryKeys = {
     Smartphone: "smartphones",
@@ -130,6 +131,15 @@ languageToggle.addEventListener("click", () => {
   if (typeof applyProductsOptions === "function") {
     applyProductsOptions();
   }
+  if (typeof renderCart === "function") {
+    renderCart();
+  }
+  if (typeof renderWishlist === "function") {
+    renderWishlist();
+  }
+  if (typeof renderCheckout === "function") {
+    renderCheckout();
+  }
 });
 
 applyLanguage(currentLanguage);
@@ -146,5 +156,12 @@ window.addEventListener("pageshow", (event) => {
     if (typeof renderProductDetails === "function") {
       renderProductDetails();
     }
+  }
+});
+
+// Back History With ESC Btn
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    history.back();
   }
 });

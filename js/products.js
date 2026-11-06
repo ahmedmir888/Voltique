@@ -144,7 +144,7 @@ function showToast(message) {
 
   toastTimer = setTimeout(() => {
     toast.classList.remove("show");
-  }, 3000);
+  }, 2000);
 }
 
 // Adding Products To Cart Logic
