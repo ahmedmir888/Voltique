@@ -61,9 +61,13 @@
 
     <section class="contact-hero">
       <div class="hero-content reveal reveal-left">
-        <span class="hero-subtitle">CONTACT US</span>
-        <h1 class="hero-title">Let's Talk Technology</h1>
-        <p class="hero-description">
+        <span class="hero-subtitle" data-i18n="contactHeroSubTitle"
+          >CONTACT US</span
+        >
+        <h1 class="hero-title" data-i18n="contactHeroTitle">
+          Let's Talk Technology
+        </h1>
+        <p class="hero-description" data-i18n="contactHeroDescription">
           Have a qustion, feedback, or need support? We're here to help. Get in
           touch with our team and we'll respond as soon as poosible.
         </p>
@@ -75,8 +79,15 @@
           <div class="contact-info-box">
             <div class="info-box-icon"><i class="bx bx-envelope"></i></div>
             <div class="info-box-content">
-              <h4 class="info-title">Email Support</h4>
-              <p class="info-description">We'll respond within 24 hours.</p>
+              <h4 class="info-title" data-i18n="contactSupportEmailTitle">
+                Email Support
+              </h4>
+              <p
+                class="info-description"
+                data-i18n="contactSupportEmailDescription"
+              >
+                We'll respond within 24 hours.
+              </p>
               <a href="mailto:ahmed.mir.45722@gmail.com" class="info-link"
                 >ahmed.mir.45722@gmail.com</a
               >
@@ -85,13 +96,21 @@
           <div class="contact-info-box">
             <div class="info-box-icon"><i class="bx bxs-phone"></i></div>
             <div class="info-box-content">
-              <h4 class="info-title">Phone Support</h4>
-              <p class="info-description">Mon - Fri, 9:00 AM - 6:00 PM</p>
+              <h4 class="info-title" data-i18n="contactSupportPhoneTitle">
+                Phone Support
+              </h4>
+              <p
+                class="info-description"
+                data-i18n="contactSupportPhoneDescription"
+              >
+                Mon - Fri, 9:00 AM - 6:00 PM
+              </p>
               <a
                 href="https://wa.me/963937014842"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="info-link"
+                data-i18n="contactSupportPhoneNumber"
                 >+963 937 014 842</a
               >
             </div>
@@ -99,8 +118,15 @@
           <div class="contact-info-box">
             <div class="info-box-icon"><i class="bx bxl-github"></i></div>
             <div class="info-box-content">
-              <h4 class="info-title">GitHub Account</h4>
-              <p class="info-description">Check Our GitHub Account</p>
+              <h4 class="info-title" data-i18n="contactSupportGithubTitle">
+                GitHub Account
+              </h4>
+              <p
+                class="info-description"
+                data-i18n="contactSupportGithubDescription"
+              >
+                Check Our GitHub Account
+              </p>
               <a
                 href="https://github.com/ahmedmir888"
                 target="_blank"
@@ -112,49 +138,67 @@
           </div>
         </div>
         <div class="contact-meesage">
-          <h1>Send Us a Message</h1>
-          <p>
+          <h1 data-i18n="contactContactMessageTitle">Send Us a Message</h1>
+          <p data-i18n="contactContactMessageDescription">
             Fill out the form below and we'll get back to you as soon as
             possible.
           </p>
           <form class="contact-controls">
             <div class="user-info">
               <div class="user-name">
-                <label for="">Full Name *</label>
+                <label for="" data-i18n="contactControlsFullName"
+                  >Full Name *</label
+                >
                 <input
                   type="text"
                   class="user-name-input"
                   placeholder="Your Name"
                   required
+                  data-i18n-placeholder="contactControlsNamePlaceHolder"
                 />
                 <i class="bx bx-user"></i>
               </div>
               <div class="user-email">
-                <label for="">Email Address *</label>
+                <label for="" data-i18n="contactControlsUserEmail"
+                  >Email Address *</label
+                >
                 <input
                   type="email"
                   class="user-name-input"
                   placeholder="Your Email"
+                  data-i18n-placeholder="contactControlsEmailPlaceHolder"
                   required
                 />
                 <i class="bx bx-envelope"></i>
               </div>
             </div>
             <div class="select-div">
-              <label for="">Subject *</label>
+              <label for="" data-i18n="contactControlsSelectTitle"
+                >Subject *</label
+              >
               <i class="bx bx-purchase-tag"></i>
               <select class="subject-options">
-                <option value="">Select Subject</option>
-                <option value="">Issue</option>
-                <option value="">qustions</option>
+                <option value="" data-i18n="contactControlsSelectValue1">
+                  Select Subject
+                </option>
+                <option value="" data-i18n="contactControlsSelectValue2">
+                  Issue
+                </option>
+                <option value="" data-i18n="contactControlsSelectValue3">
+                  questions
+                </option>
               </select>
             </div>
             <div class="text-area">
               <i class="bx bx-chat"></i>
-              <textarea placeholder="Type your message here..."></textarea>
+              <textarea
+                placeholder="Type your message here..."
+                data-i18n-placeholder="contactControlsTextArea"
+              ></textarea>
             </div>
             <button class="contact-submit-btn">
-              <i class="bx bxs-send"></i> Send Message
+              <i class="bx bxs-send"></i>
+              <span data-i18n="contactControlsBtn">Send Message</span>
             </button>
           </form>
         </div>
@@ -184,7 +228,9 @@
               </a>
             </li>
           </ul>
-          <p data-i18n="homeContactFooterTitle">Here you can take a look at our work on social media.</p>
+          <p data-i18n="homeContactFooterTitle">
+            Here you can take a look at our work on social media.
+          </p>
         </div>
         <div class="column">
           <ul class="links">
@@ -208,16 +254,22 @@
         <div class="column">
           <div class="line">
             <i class="bx bx-current-location"></i>
-            <div class="info" data-i18n="homeFooterLocation">Hasaka, Klasa, Judy Circle</div>
+            <div class="info" data-i18n="homeFooterLocation">
+              Hasaka, Klasa, Judy Circle
+            </div>
           </div>
           <div class="line">
             <i class="bx bxs-alarm-exclamation"></i>
-            <div class="info"data-i18n="homeFooterAlarm">Business Hours: 8:00 AM - 3:00 PM</div>
+            <div class="info" data-i18n="homeFooterAlarm">
+              Business Hours: 8:00 AM - 3:00 PM
+            </div>
           </div>
           <div class="line">
             <i class="bx bxs-phone-call"></i>
             <div class="info">
-              <span>+963 937 014 842</span>
+              <span data-i18n="contactSupportPhoneNumber"
+                >+963 937 014 842</span
+              >
             </div>
           </div>
         </div>
@@ -230,7 +282,9 @@
               <a href="#" data-i18n="homeFooterFaq">FAQ</a>
             </li>
             <li>
-              <a href="pages/cart.html" data-i18n="homeFooterShipping">Shipping</a>
+              <a href="pages/cart.html" data-i18n="homeFooterShipping"
+                >Shipping</a
+              >
             </li>
           </ul>
         </div>
