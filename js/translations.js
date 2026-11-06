@@ -253,6 +253,19 @@ const translations = {
     checkoutEmptyCart: "Your Cart Is Empty!",
     checkoutContinueShopping: "Continue Shopping",
     checkoutQuantity: "Qty:",
+
+    loginWelcome: "Welcome Back",
+    loginSubtitle: "Sign in to your account to continue your journey",
+    loginEmailPlaceholder: "Email Address",
+    loginPasswordPlaceholder: "Password",
+    forgotPassword: "Forgot Password?",
+    loginSignIn: "Sign In",
+    loginOrContinue: "Or Continue With",
+    loginNoAccount: "Don't have an account?",
+    loginCreateAccount: "Create one",
+    loginHelloFriend: "Hello, Friend",
+    loginWelcomeMessage:
+      "Enter your personal details and start your journey with us today",
   },
   ar: {
     home: "الرئيسية",
@@ -506,5 +519,17 @@ const translations = {
     checkoutEmptyCart: "سلة التسوق فارغة!",
     checkoutContinueShopping: "متابعة التسوق",
     checkoutQuantity: "الكمية:",
+
+    loginWelcome: "مرحبًا بعودتك",
+    loginSubtitle: "سجّل الدخول إلى حسابك لمتابعة رحلتك",
+    loginEmailPlaceholder: "البريد الإلكتروني",
+    loginPasswordPlaceholder: "كلمة المرور",
+    forgotPassword: "هل نسيت كلمة المرور؟",
+    loginSignIn: "تسجيل الدخول",
+    loginOrContinue: "أو تابع باستخدام",
+    loginNoAccount: "ليس لديك حساب؟",
+    loginCreateAccount: "أنشئ حسابًا",
+    loginHelloFriend: "مرحبًا بك",
+    loginWelcomeMessage: "أدخل بياناتك الشخصية وابدأ رحلتك معنا اليوم",
   },
 };

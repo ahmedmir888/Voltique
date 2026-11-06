@@ -63,18 +63,19 @@
         <div class="form-section">
           <!-- Login Form  -->
           <div class="form-container" id="loginForm">
-            <h1 class="form-title">Welcome Back</h1>
-            <p class="form-subtitle">
+            <h1 class="form-title" data-i18n="loginWelcome">Welcome Back</h1>
+            <p class="form-subtitle" data-i18n="loginSubtitle">
               Sign in to your account to continue your journey
             </p>
 
-            <form action="" id="loginFormSubmit">
+            <form action="\" id="loginFormSubmit">
               <div class="form-group">
                 <input
                   id="login-email"
                   type="email"
                   class="form-control"
                   placeholder="Email Address"
+                  data-i18n-placeholder="loginEmailPlaceholder"
                   required
                 />
                 <i class="bx bxs-envelope"></i>
@@ -85,19 +86,22 @@
                   type="password"
                   class="form-control"
                   placeholder="Password"
+                  data-i18n-placeholder="loginPasswordPlaceholder"
                   required
                 />
                 <i class="bx bx-key"></i>
               </div>
               <div class="forgot-password">
-                <a href="#">Forgot Password ?</a>
+                <a href="#" data-i18n="forgotPassword">Forgot Password ?</a>
               </div>
               <button type="submit" class="btn-primery">
-                <span class="btn-text">Sign Up</span>
+                <span class="btn-text" data-i18n="loginSignIn">Sign In</span>
               </button>
             </form>
             <div class="social-login">
-              <div class="social-title">Or Continue With</div>
+              <div class="social-title" data-i18n="loginOrContinue">
+                Or Continue With
+              </div>
               <div class="social-buttons">
                 <div class="social-btn google">
                   <i class="bx bxl-google"></i>
@@ -110,16 +114,17 @@
                 </div>
               </div>
             </div>
-            <div class="form-switch">
-              Don't have an account? <a href="#">Create one</a>
+            <div class="form-switch" data-i18n="loginNoAccount">
+              Don't have an account?
+              <a href="#" data-i18n="loginCreateAccount">Create one</a>
             </div>
           </div>
         </div>
         <div class="image-section">
           <div class="floating-shapes">
             <div class="image-content">
-              <h2>Hello, Friend</h2>
-              <p>
+              <h2 data-i18n="loginHelloFriend">Hello, Friend</h2>
+              <p data-i18n="loginWelcomeMessage">
                 Enter your personal details and start your journey with us today
               </p>
             </div>

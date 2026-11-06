@@ -771,25 +771,28 @@ html[dir="rtl"] .feature-product-link:hover i {
 .brands-slider {
   width: 100%;
   overflow: hidden;
-  background-color: var(--black);
+  background-color: var(--black, #000);
   padding: 20px 0;
   margin-bottom: 100px;
+  direction: ltr;
 }
 
 .brands-track {
   display: flex;
   width: max-content;
-  gap: 30px;
-  animation: scrollBrands 20s linear infinite;
+  gap: 0;
+  animation: scrollBrands 15s linear infinite;
 }
 
 .brands-group {
   display: flex;
+  flex-shrink: 0;
   gap: 30px;
+  padding-right: 30px;
 }
 
 .brands-slider .brand {
-  color: var(--white);
+  color: var(--white, #fff);
   flex: 0 0 180px;
 
   display: flex;
@@ -809,18 +812,21 @@ html[dir="rtl"] .feature-product-link:hover i {
 }
 
 .brands-slider .brand:hover {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--white, #fff);
+  color: var(--black, #000);
 }
 
 @keyframes scrollBrands {
   from {
     transform: translateX(0);
   }
-
   to {
-    transform: translateX(calc(-50% - 15px));
+    transform: translateX(-50%);
   }
+}
+
+.brands-slider:hover .brands-track {
+  animation-play-state: paused;
 }
 /* end brands section  */
 
@@ -925,13 +931,13 @@ html[dir="rtl"] .footer .footer-logo {
   width: 40px;
   height: 40px;
 }
-@media(max-width:768px){
-  .footer .footer-logo{
+@media (max-width: 768px) {
+  .footer .footer-logo {
     justify-content: center;
   }
 }
-@media(max-width:768px){
-  html[dir="rtl"] .footer .footer-logo{
+@media (max-width: 768px) {
+  html[dir="rtl"] .footer .footer-logo {
     justify-content: center;
   }
 }
