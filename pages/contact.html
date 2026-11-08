@@ -143,13 +143,14 @@
             Fill out the form below and we'll get back to you as soon as
             possible.
           </p>
-          <form class="contact-controls">
+          <form class="contact-controls" id="contact-controls">
             <div class="user-info">
               <div class="user-name">
-                <label for="" data-i18n="contactControlsFullName"
+                <label for="user-name-input" data-i18n="contactControlsFullName"
                   >Full Name *</label
                 >
                 <input
+                  id="user-name-input"
                   type="text"
                   class="user-name-input"
                   placeholder="Your Name"
@@ -159,10 +160,13 @@
                 <i class="bx bx-user"></i>
               </div>
               <div class="user-email">
-                <label for="" data-i18n="contactControlsUserEmail"
+                <label
+                  for="user-email-input"
+                  data-i18n="contactControlsUserEmail"
                   >Email Address *</label
                 >
                 <input
+                  id="user-email-input"
                   type="email"
                   class="user-name-input"
                   placeholder="Your Email"
@@ -173,11 +177,13 @@
               </div>
             </div>
             <div class="select-div">
-              <label for="" data-i18n="contactControlsSelectTitle"
+              <label
+                for="subject-options-id"
+                data-i18n="contactControlsSelectTitle"
                 >Subject *</label
               >
               <i class="bx bx-purchase-tag"></i>
-              <select class="subject-options">
+              <select class="subject-options" id="subject-options-id">
                 <option value="" data-i18n="contactControlsSelectValue1">
                   Select Subject
                 </option>
@@ -192,6 +198,7 @@
             <div class="text-area">
               <i class="bx bx-chat"></i>
               <textarea
+              id="the-text-area-box"
                 placeholder="Type your message here..."
                 data-i18n-placeholder="contactControlsTextArea"
               ></textarea>

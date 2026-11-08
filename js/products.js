@@ -123,12 +123,12 @@ function applyProductsOptions() {
 
 // Adding Toast Notification
 
-toastedContainer = document.querySelector(".toasted-container");
+const toastedContainer = document.querySelector(".toasted-container");
 
 const toast = document.createElement("div");
 toast.className = "toast";
 
-toastMessage = document.createElement("p");
+const toastMessage = document.createElement("p");
 toastMessage.className = "toast-message";
 toast.appendChild(toastMessage);
 

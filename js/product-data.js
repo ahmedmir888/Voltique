@@ -57,7 +57,7 @@ const productsData = [
     rating: 5,
     img: "../imgs/ASUS TUF Gaming A15.jfif",
     description:
-    "Display: 15.6-inch Full HD high-refresh-rate display, Processor: AMD Ryzen 7, Graphics: NVIDIA GeForce RTX GPU depending on configuration, RAM: DDR5 memory, Storage: NVMe SSD, Cooling: Dual-fan cooling system, Connectivity: Wi-Fi 6, Ports: Multiple USB and HDMI ports, Operating System: Windows 11. Specifications may vary by model",
+      "Display: 15.6-inch Full HD high-refresh-rate display, Processor: AMD Ryzen 7, Graphics: NVIDIA GeForce RTX GPU depending on configuration, RAM: DDR5 memory, Storage: NVMe SSD, Cooling: Dual-fan cooling system, Connectivity: Wi-Fi 6, Ports: Multiple USB and HDMI ports, Operating System: Windows 11. Specifications may vary by model",
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ const productsData = [
     rating: 5,
     img: "../imgs/Dell XPS 13.jfif",
     description:
-    "Display: 13.4-inch high-resolution display, Processor: Intel Core Ultra depending on generation, Graphics: Integrated Intel graphics, RAM: Typically 16GB, Storage: Typically 512GB SSD, Connectivity: Thunderbolt ports and Wi-Fi, Operating System: Windows 11, Design: Premium lightweight ultrabook. Specifications may vary by model",
+      "Display: 13.4-inch high-resolution display, Processor: Intel Core Ultra depending on generation, Graphics: Integrated Intel graphics, RAM: Typically 16GB, Storage: Typically 512GB SSD, Connectivity: Thunderbolt ports and Wi-Fi, Operating System: Windows 11, Design: Premium lightweight ultrabook. Specifications may vary by model",
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const productsData = [
     rating: 5,
     img: "../imgs/Lenovo IdeaPad Slim 5.jfif",
     description:
-    "Display: 14-inch or 16-inch IPS or OLED depending on configuration, Processor: Intel Core or AMD Ryzen, RAM: Typically 16GB, Storage: Typically 512GB SSD, Graphics: Integrated graphics, Connectivity: Wi-Fi and Bluetooth, Ports: USB and HDMI, Operating System: Windows 11. Specifications may vary by model",
+      "Display: 14-inch or 16-inch IPS or OLED depending on configuration, Processor: Intel Core or AMD Ryzen, RAM: Typically 16GB, Storage: Typically 512GB SSD, Graphics: Integrated graphics, Connectivity: Wi-Fi and Bluetooth, Ports: USB and HDMI, Operating System: Windows 11. Specifications may vary by model",
   },
   {
     id: 9,
@@ -122,7 +122,7 @@ const productsData = [
   {
     id: 13,
     name: "Apple Watch Series 11",
-    category: "Smartwatch",
+    category: "Accessories",
     price: 400,
     rating: 5,
     img: "../imgs/Apple Watch Series 11.jfif",
@@ -132,7 +132,7 @@ const productsData = [
   {
     id: 14,
     name: "Samsung Galaxy Watch 8",
-    category: "Smartwatch",
+    category: "Accessories",
     price: 350,
     rating: 5,
     img: "../imgs/Samsung Galaxy Watch 8.jfif",
